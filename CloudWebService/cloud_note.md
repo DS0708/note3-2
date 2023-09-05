@@ -88,7 +88,7 @@ What is Smart City ?
 
 ```
 Cloud Computing : Xaas (Everything as a Service)
-    - IaaS (Infrastructure as a Service)
+    - IaaS (Infrastructure as a Service)d
     - PaaS (Platform as a Service)
     - Saas (Software as a Service)
 ```
