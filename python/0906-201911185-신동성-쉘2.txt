@@ -1,0 +1,114 @@
+ ds@sindongseong-ui-MacBookAir  ~  
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/ex.py"
+hello
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/ex.py"
+hello
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/ex.py"
+입력:3
+입력:4
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-1.py"
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-1.py"
+입력:3
+입력:4
+7
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-1.py"
+입력:3
+입력:4
+7
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-1.py"
+입력:3
+입력:4
+합은 7
+곱은 12
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-1.py"
+입력:10
+입력:20
+합= 30
+곱= 200
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-2.py"
+  File "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-2.py", line 1
+    1st
+    ^
+SyntaxError: invalid decimal literal
+ ✘ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-2.py"
+1st숫자:45
+2nd숫자:66
+
+더하기= 111
+빼기= -21
+나머지= 45
+곱하기= 2970
+나누기= 0.6818181818181818
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-2.py"
+1st숫자:10
+2nd숫자:20
+
+더하기= 30
+빼기= -10
+나머지= 10
+곱하기= 200
+나누기= 0.5
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-2.py"
+1st숫자:45
+2nd숫자:66
+
+더하기= 111
+빼기= -21
+나머지= 45
+곱하기= 2970
+나누기= 0.6818181818181818
+나누기=0.68
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-2.py"
+1st숫자:45
+2nd숫자:66
+
+더하기= 111
+빼기= -21
+나머지= 45
+곱하기= 2970
+나누기= 0.6818181818181818
+나누기=0.68
+나누기=0.68
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-2.py"
+1st숫자:45
+2nd숫자:66
+
+더하기= 111
+빼기= -21
+나머지= 45
+곱하기= 2970
+나누기= 0.6818181818181818
+나누기=0.68
+나누기=0.68
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-2.py"
+1st숫자:45
+2nd숫자:66
+
+더하기= 111
+빼기= -21
+나머지= 45
+곱하기= 2970
+나누기= 0.6818181818181818
+나누기=0.68
+나누기=0.68
+나누기=0.68
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-3.py"
+성적 입력:89
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-3.py"
+성적 입력:89
+상
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-3.py"
+성적 입력:78
+중
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-3.py"
+성적 입력:57
+하
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-3.py"
+성적 입력:89
+상
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-3.py"
+성적 입력:78
+중
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/0906-201911185-신동성-3.py"
+성적 입력:57
+하
