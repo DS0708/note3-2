@@ -1,0 +1,106 @@
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/3주차   main ±  python3
+Python 3.11.4 (main, Jun 20 2023, 17:23:00) [Clang 14.0.3 (clang-1403.0.22.14.1)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> n = 1
+>>> nums = [1,2,3]
+>>> type(nums)
+<class 'list'>
+>>> tt = (4,5,6)
+>>> print(type(tt))
+<class 'tuple'>
+>>> ss = {3,6,9}
+>>> print(type(ss))
+<class 'set'>
+>>> s = 'shin'
+>>> print(s)
+shin
+>>> print(s[1])
+h
+>>> nums = [1,2,3,4]
+>>> print(nums)
+[1, 2, 3, 4]
+>>> nums[0] = 5
+>>> print(nums)
+[5, 2, 3, 4]
+>>> nums.append(10)
+>>>
+>>> print(nums)
+[5, 2, 3, 4, 10]
+>>> nums.insert(1,20)
+>>> nums
+[5, 20, 2, 3, 4, 10]
+>>> dd = {1:'one',2:'two'}
+>>> print(dd)
+{1: 'one', 2: 'two'}
+>>> print(type(dd))
+<class 'dict'>
+>>> nums2 = [1,[2,3],'3']
+>>> print(nums2)
+[1, [2, 3], '3']
+>>> print(sum(nums))
+44
+>>> print(len(nums))
+6
+>>> print(sum(nums)/len(nums))
+7.333333333333333
+>>> score = [10,20,30,40]
+>>> print(score[-4])
+10
+>>> mix = [['jenny','chris'],['철수','영희']]
+>>> print(mix)
+[['jenny', 'chris'], ['철수', '영희']]
+>>> print(mix[0])
+['jenny', 'chris']
+>>> print(mix[1])
+['철수', '영희']
+>>> print(len(mix))
+2
+>>> data = [1,'computer',2,'printer',['a','b']]
+>>> print(1 in data)
+True
+>>> print('comp' in data)
+False
+>>> print(['a','b'] in data)
+True
+>>> list3 = ['H','e','l','l','o']
+>>> print(list3)
+['H', 'e', 'l', 'l', 'o']
+>>>
+>>> list4 = list("Hello")
+>>> print(list4)
+['H', 'e', 'l', 'l', 'o']
+>>>
+>>> list6 = [list3,list4]
+>>> print(list6)
+[['H', 'e', 'l', 'l', 'o'], ['H', 'e', 'l', 'l', 'o']]
+>>> fruits = ["사과","딸기","포도"]
+>>> result = fruits.pop()
+>>> print(result)
+포도
+>>> fruits.pop(1)
+'딸기'
+>>>
+>>> print(fruits)
+['사과']
+>>> fruits = ["사과","딸기","포도"]
+>>> result = fruits.remove("딸기")
+>>> print(result)
+None
+>>> print(fruits)
+['사과', '포도']
+>>> word = ['a','e']
+>>> num = [1,3,5]
+>>>
+>>> print(word+num)
+['a', 'e', 1, 3, 5]
+>>> print(word*3)
+['a', 'e', 'a', 'e', 'a', 'e']
+>>> nums=[1,2,'3']
+>>> nums[2]
+'3'
+>>> nums[:2]
+[1, 2]
+>>> nums[-3:-1]
+[1, 2]
+>>> nums[:]
+[1, 2, '3']
