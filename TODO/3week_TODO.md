@@ -1,11 +1,11 @@
 # TO Do List 3주차
 
-### `UX 디자인`
+### `UX 디자인` 
 - [x] 2주차 강의
-- [ ] 3주차 강의
+- [x] 3주차 강의
 - [x] 2주차 설문조사 `(9월 30일까지)`
 [2주차 설문링크](https://forms.gle/pZPotm4uKZ8CQA8V8)
-- [ ] 3주차 설문조사 `(9월 30일까지)`
+- [x] 3주차 설문조사 `(9월 30일까지)`
 [3주차 설문링크](https://docs.google.com/forms/d/e/1FAIpQLSfmoUIgjP-n2Hqm2KPICQVo52DrlDkdzmaAcL3AQLiIOdTHRw/viewform)
 - [x] 팀에서 개발할 기말과제의 주제를 PPT 5장 이내로 작성하여 제출하기 `(9월 16일)`
 
@@ -88,8 +88,8 @@ s
 
 ### `0916` 
 - [x] `ux` 2주차 설문
-- [] `ux` 3주차 강의
-- [] `ux` 3주차 설문
+- [x] `ux` 3주차 강의
+- [x] `ux` 3주차 설문
 - [x] `ux` 개발 주제 정하기 `0916까지`
 - [] 약수, 배수와 소수 `(백준)`
 
