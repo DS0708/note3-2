@@ -84,7 +84,7 @@ undefined
 
 > The `this` keyword in a constructor is used to refer to the `object to be created in the future.`
 
-### 4. Module Context
+### 3. Module Context
 ```javascript
 // File : m3.js
 this.x = 10;
@@ -110,6 +110,35 @@ console.log(mc);
 { x: 10, z: [Function: bar] }
 ```
 > this.y 주석 처리를 안했을 경우에 { x: 10, y: [Function: foo], z: [Function: bar] } 으로 결과가 나오는 것으로 보아, `this == module.exports`
+
+### 4. Global Context 
+```javascript
+x  = 119;
+function foo(){
+    var x = 112;
+    console.log(x,this.x,global.x);
+}
+var y = {
+    x : 113,
+    m : foo,
+    bar : function(){return(this.x+x);}
+};
+y.m();
+foo();
+```
+```
+실행결과
+112 113 119
+112 119 119
+```
+> function foo를 실행 시키는 주체인 Global 이 `this` 가 된다.
+
+### Shared Access to Variables
+- Function Closure
+    - Inner functions share local variables in enclosing outer functions
+- Execution Context
+    - `Use of this`
+    - Functions that belong to the same object can access the data properties of the object by this
 
 
 
