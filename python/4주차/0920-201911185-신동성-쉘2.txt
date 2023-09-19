@@ -1,0 +1,90 @@
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-1.py"
+정수 입력:5
+25
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-1.py"
+정수 입력: 10
+100
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-1.py"
+정수 입력:10
+100
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-2.py"
+반지름 입력:5.2
+원의 넓이 =  84.9
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-2.py"
+반지름 입력:10
+원의 넓이 =  314.0
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-3.py"
+수1 입력: 3
+수2 입력: 5
+5
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-3.py"
+수1 입력: 5
+수2 입력: 5
+-1 
+ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-3.py"
+수1 입력: 3
+수2 입력: 20
+20
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-3.py"
+수1 입력: 10
+수2 입력: 10
+-1
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-3.py"
+수1 입력: 90 
+수2 입력: 1
+90
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-4.py"
+8
+ ✘ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-4.py"
+Traceback (most recent call last):
+  File "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-4.py", line 7, in <module>
+    print(b)
+          ^
+NameError: name 'b' is not defined
+ ✘ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-4.py"
+1
+8
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-4.py"
+1
+8
+8
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-4.py"
+1
+1
+8
+8
+8
+ ✘ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-5.py"
+면적 =  200
+0
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-5.py"
+면적 =  200
+200
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-5.py"
+면적 =  200
+200
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/dictionary.py"
+[1, 2, 3, 4]
+<class 'list'>
+{1: 'one', 2: 'two'}
+<class 'dict'>
+{}
+{}
+{'Kim': '123-4567', 'Park': '234-5678', 'Lee': '344-5678'}
+123-4567
+344-5678
+123-4567
+{'Park': '234-5678', 'Lee': '344-5678'}
+False
+True
+{}
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/4주차/0920-201911185-신동성-7.py"
+단어 입력:1
+None
+단어 입력:python
+None
+단어 입력:class
+학급
+단어 입력:student
+학생
+단어 입력:

@@ -1,0 +1,61 @@
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/4주차   main  python
+Python 3.11.4 (main, Jun 20 2023, 17:23:00) [Clang 14.0.3 (clang-1403.0.22.14.1)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> abs(-3)
+3
+>>> print(round(1.23))
+1
+>>> print(round(1.5))
+2
+>>> print(round(1.2345,2))
+1.23
+>>> print(round(1.2345,3))
+1.234
+>>> print(range(5))
+range(0, 5)
+>>> print(pow(2,3))
+8
+>>> print(pow(32.4,2))
+1049.76
+>>> print(len("school"))
+6
+>>> print(len("학교"))
+2
+>>> print(max(10,20,30))
+30
+>>> print(min(1,2,3,4,5))
+1
+>>> a = 2
+>>> b = 3
+>>> c = a+b
+>>> print(c)
+5
+>>> print(str(a)+str(b))
+23
+>>> print(sorted([3,2,1,4]))
+[1, 2, 3, 4]
+>>>
+>>> nums = {1:'one',2:'two'}
+>>> print(nums)
+{1: 'one', 2: 'two'}
+>>> print(type(nums))
+<class 'dict'>
+>>> phone = {}
+>>> print(phone)
+{}
+>>> phone2 = dict()
+>>> print(phone2)
+{}
+>>>
+>>> phone['Kim'] = "123-4567"
+>>> print(phone)
+{'Kim': '123-4567'}
+>>> phone['Park'] = "234-5678"
+>>> phone['Lee'] = "344-5678"
+>>> phone
+{'Kim': '123-4567', 'Park': '234-5678', 'Lee': '344-5678'}
+>>> print(phone['Kim'])
+123-4567
+>>> print(phone.get('Lee'))
+344-5678
+>>>
