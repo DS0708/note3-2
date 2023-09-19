@@ -27,4 +27,16 @@
     - Supported by `Prototype Chain & Closure` (프로토타입 체인은 상위 객체의 prototype 프로퍼티를 호출할 수 있도록 하는 메커니즘)
     - Inheritance, Encapsulation, Information Hiding 제공
 - Functional Programming
-    - 
+    - Supported by `Function and Closure`
+
+### Type-less
+- Strongly-Typed
+    - Type declaration for every variable
+    - `static`
+    - Type declaration -> 언제 실행시키더라도 책에 나온 것과 결과가 같음
+- Type-less
+    - No type declaration
+    - `dynamic`
+    - Runtime engine (code) -> 실행에 따라 결과가 다르다.
+
+
