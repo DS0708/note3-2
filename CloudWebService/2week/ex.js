@@ -1,3 +1,2 @@
-x = 10;
-var y = 11;
-console.log(x,y);
+var obj1 = {first:'John',last : 'Smith'}
+console.log(obj1);
