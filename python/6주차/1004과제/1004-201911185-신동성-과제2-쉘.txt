@@ -1,0 +1,24 @@
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3-2/python/6주차/1004과제/1004-201911185-신동성-과제2.py"
+Input the character to insert into the stack :p
+Input the character to insert into the stack :y
+Input the character to insert into the stack :t
+Input the character to insert into the stack :h
+Input the character to insert into the stack :o
+Input the character to insert into the stack :n
+nohtyp
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3-2/python/6주차/1004과제/1004-201911185-신동성-과제2.py"
+Input the character to insert into the linked_list :p
+Input the character to insert into the linked_list :y
+Input the character to insert into the linked_list :t
+Input the character to insert into the linked_list :h
+Input the character to insert into the linked_list :o
+Input the character to insert into the linked_list :n
+p y t h o n 
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3-2/python/6주차/1004과제/1004-201911185-신동성-과제2.py"
+Input the character to insert into the linked_list :a
+Input the character to insert into the linked_list :b
+Input the character to insert into the linked_list :c
+Input the character to insert into the linked_list :d
+Input the character to insert into the linked_list :e
+Input the character to insert into the linked_list :f
+abcdef

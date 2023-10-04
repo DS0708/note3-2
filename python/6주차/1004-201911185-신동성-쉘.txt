@@ -1,0 +1,141 @@
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/6주차/1004-201911185-신동성-1.py"
+5
+2
+i
+True
+False
+False
+True
+['사과', '딸기', '포도']
+['사과', '바나나', '딸기', '포도']
+포도
+['사과', '바나나', '딸기']
+사과
+['바나나', '딸기']
+None
+['바나나']
+<class 'dict'>
+<class 'dict'>
+{'Kim': '123', 'Park': '456', 'Lee': '789'}
+123
+None
+456
+123
+None
+True
+False
+{}
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/6주차/1004-201911185-신동성-2.py"
+[1, 2, 3]
+2
+ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/6주차/tempCodeRunnerFile.py"
+[1, 2, 3, 4, 5]
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/6주차/1004-201911185-신동성-2.py"
+[[1, 2, 3], [4, 5, 6]]
+[1, 2, 3]
+[4, 5, 6]
+2
+6
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/6주차/1004-201911185-신동성-2.py"
+[1, 2]
+[3, 4]
+[5, 6]
+[1, 2]
+[3, 4]
+[5, 6]
+✘ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/not
+e3-2/python/6주차/1004-201911185-신동성-3.py"
+[]
+추가할 값은? 8
+추가할 값은? 4
+추가할 값은? 9
+추가할 값은? 10
+[8, 4, 9, 10]
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/6주차/1004-201911185-신동성-3.py"
+[]
+추가할 값은? 5
+추가할 값은? 6
+추가할 값은? 7
+추가할 값은? 78
+[5, 6, 7, 78]
+[5, 6, 12, 7, 78]
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/6주차/1004-201911185-신동성-3.py"
+[1, 2, 3, 4, 5]
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/6주차/1004-201911185-신동성-3.py"
+[1, 2, 3, 4, 5]
+원하는 인덱스 번호는?  
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/6주차/1004-201911185-신동성-3.py"
+[1, 2, 3, 4, 5]
+원하는 인덱스 번호는? 2
+인덱스 [2] 위치에 추가할 값은 ?7
+원하는 인덱스 번호는?  
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/6주차/1004-201911185-신동성-3.py"
+[1, 2, 3, 4, 5]
+원하는 인덱스 번호는? 2
+인덱스 [2] 위치에 추가할 값은 ?7
+Traceback (most recent call last):
+  File "/Users/ds/ds_study/note3-2/python/6주차/1004-201911185-신동성-3.py", line 22, in <module>
+    num.insert(sel,val)
+TypeError: 'str' object cannot be interpreted as an integer
+ ✘ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/not
+e3-2/python/6주차/1004-201911185-신동성-3.py"
+[1, 2, 3, 4, 5]
+원하는 인덱스 번호는? 2
+인덱스 [2] 위치에 추가할 값은 ?7
+[1, 2, 7, 3, 4, 5]
+원하는 인덱스 번호는? 4
+인덱스 [4] 위치에 추가할 값은 ?1
+[1, 2, 7, 3, 1, 4, 5]
+원하는 인덱스 번호는? 
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/6주차/1004-201911185-신동성-3.py"
+[1, 2, 3, 4, 5]
+원하는 인덱스 번호는? 1
+인덱스 [1] 위치에 추가할 값은 ?2
+[1, 2, 2, 3, 4, 5]
+원하는 인덱스 번호는?  
+종료...
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/6주차/1004-201911185-신동성-4.py"
+{8: [65, 4], 4: [54, 9], 9: [12, None]}
+[65, 4]
+65
+4
+65 4
+54 9
+12 None
+ ✘ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/not
+e3-2/python/6주차/1004-201911185-신동성-6.py"
+선택:(1:삽입, 2:삭제, 3:종료)>>>>2
+스택이 비었습니다.
+선택:(1:삽입, 2:삭제, 3:종료)>>>>1
+삽입할 데이터 = 2
+[2]
+선택:(1:삽입, 2:삭제, 3:종료)>>>>2
+삭제된 데이터 = 2
+[]
+선택:(1:삽입, 2:삭제, 3:종료)>>>>3
+종료합니다.
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/6주차/1004-201911185-신동성-5.py"
+큐의 값: [1, 2, 3]
+데이터 추가 이후: [1, 2, 3, 4, 5]
+삭제 데이터:1
+삭제한 후 결과: [2, 3, 4, 5]
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/6주차/1004-201911185-신동성-5.py"
+큐의 값: [1, 2, 3]
+데이터 추가 이후: [1, 2, 3, 4, 5]
+
+삭제 데이터:1
+큐에 남은 데이터: [2, 3, 4, 5]
