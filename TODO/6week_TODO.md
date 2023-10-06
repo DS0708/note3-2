@@ -87,12 +87,12 @@
 ### `ThursDay October 05` 30m
 - [x] 알고리즘 백준문제 시간복잡도
 
-### `FriDay October 06`
+### `FriDay October 06` 5h
 - [x] L6 복습  `선대`
 - [x] L7 `선대`
 - [x] L8 `선대`
 - [x] L9 `선대`
-- [ ] L10`선대`
+- [x] L10`선대`
 
 ### `SaturDay October 07`
 
