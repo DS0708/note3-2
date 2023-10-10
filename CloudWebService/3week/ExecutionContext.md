@@ -1,8 +1,9 @@
-# Execution Context
+# Execution Context `'this'`
 
-`Execution Context` : the `runtime environment`(object) where and when a function is executed.
+- `Execution Context` : the `runtime environment`(object) where and when a function is executed.
+- The keyword `this` is used to refer to the current execution context for its function.
 
-### Types of Execution Context : Object
+### Types of Execution Context : Object (실행결과로 나오는 object = Execution context)
 - `Object Context`. When a function is used as a method
 - `Constructor Context`. When a function is used as `object constructor.`
 - `Module Context`. When a module is excuted (imported) by the `require function`
@@ -25,7 +26,7 @@ var y = {
 
 var z = {
     x : 'hello',
-    bla : foo
+    bla : foo 
 };
 
 y.m();  // 112, 113, 119
@@ -33,7 +34,7 @@ z.bla(); // 112, 'hello', 119
 
 y.bar(); // 113 + 119
 ```
-> this는 method function을 실행하는 object
+> this는 method function을 실행하는 Json object
 
 ### 1. Object Context (2/2) : Nested Objects
 ```javascript
@@ -68,9 +69,13 @@ person1.z = 777     // a new property is added
 var person2 = new Person();
 var person3 = Person(); // res == undefined
 
+//var person4 = new persone3(); //ERROR
+
 console.log(person1);
 console.log(person2);
 console.log(person3);
+//console.log(person4);
+
 ```
 
 실행결과 
@@ -85,6 +90,7 @@ undefined
 > The `this` keyword in a constructor is used to refer to the `object to be created in the future.`
 
 ### 3. Module Context
+- module이 export 될 때 만들어지는 object 기준
 ```javascript
 // File : m3.js
 this.x = 10;
@@ -112,6 +118,8 @@ console.log(mc);
 > this.y 주석 처리를 안했을 경우에 { x: 10, y: [Function: foo], z: [Function: bar] } 으로 결과가 나오는 것으로 보아, `this == module.exports`
 
 ### 4. Global Context 
+- Global : System-Managed object
+    - Shared by every module and function
 ```javascript
 x  = 119;
 function foo(){

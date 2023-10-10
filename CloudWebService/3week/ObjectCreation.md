@@ -45,6 +45,11 @@ calc.compute(1,3,calc.plus); //4
 ### 4. `Module-based Object Creation`
 > Node.js 에서 굉장히 중요함
 
+- Node.js application is collection of modules
+- require : the function to import a module(file)
+- Execution of module to create an object
+    - `코드가 아닌 모듈의 실행 결과가 object로 전달된다.`
+    - `require`은 모듈의 실행 결과를 object로써 받아오는 연산이다.
 ```javascript
 //module m1.js
 var x = {f1 : 1, f2:2};
@@ -62,7 +67,7 @@ module.exports = { rd:foo , wr:bar };
 ```
 ```javascript
 //module main.js
-var m1 = require('./m1');
+var m1 = require('./m1');   //m1에서 만들어진 object가 전달된다.
 var m2 = require('./m2');
 var x = m1.x; // {f1 : 1, f2:2}
 var y = m1.sum(); //3
@@ -79,9 +84,9 @@ class Animal{
     speak() {console.log(this.name + 'make a noise.');} //function은 그냥 생성 가능
 }
 
-class Dog extends Animal {
+class Dog extends Animal {  //상속도 가능
     constructor(name, age){
-        super(name);
+        super(name);    //바로 나와야함, 아니면 ERROR
         this.age = age;
     }
     speak() {console.log(this.name+'barks.');}
