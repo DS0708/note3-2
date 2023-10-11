@@ -1,0 +1,48 @@
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/7주차/1011-201911185-신동성-1.py"
+---------dict--------
+
+{}
+{'Kim': '123-4567', 'Park': '234-5678', 'Lee': '345-6789'}
+123-4567
+345-6789
+
+---------list--------
+
+printer
+i
+mouse
+m
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/7주차/1011-201911185-신동성-2.py"
+정점1의 번호?2
+정점2의 번호?3
+정점 2,3 : 인접
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/7주차/1011-201911185-신동성-2.py"
+정점1의 번호?1
+정점2의 번호?2
+정점 1,2 : 인접아님
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/7주차/1011-201911185-신동성-3.py"
+확인하려는 정점? B
+['A', 'E']
+확인하려는 정점? D
+['C', 'E']
+확인하려는 정점? 
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/7주차/1011-201911185-신동성-4.py"
+['A', ['B', ['D', 'E']], ['C', ['F', 'G']]]
+ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/note3
+-2/python/7주차/1011-201911185-신동성-4.py"
+['A', ['B', ['D', 'E']], ['C', ['F', 'G']]]
+A의 왼쪽 자식 :  B
+A의 오른쪽 자식 :  C
+A의 왼쪽 자식의 자식 ['D', 'E']
+A의 오른쪽 자식의 자식 ['F', 'G']
+ ✘ ds@sindongseong-ui-MacBookAir  ~/Downloads  python -u "/Users/ds/ds_study/not
+e3-2/python/7주차/1011-201911185-신동성-5.py"
+{'A': ['B', 'C'], 'B': ['D', 'E'], 'C': ['F', 'G']}
+A의 자식 : ['B', 'C']
+B의 자식 : ['D', 'E']
+C의 자식 : ['F', 'G']
