@@ -59,5 +59,29 @@
     - `URN` : Uniform Resource Names
     - `IRI` : Internationalized Resource Identifiers. May Contain characters from `Unicode`. (다국어가 resource identifier에 포함될 수 있다.)
 
+### Structure of URI
+![Alt text](<Screenshot 2023-10-12 at 10.19.56 PM.png>)
+- user information, query, fragment : 는 보내는 시점에 따라 `Dynamic`
+- Scheme : http, ftp, mailto, or file
+- Hierarchical part starting with "//"
+    - Authority Part
+        - Optional Authentication Part : User Name & Password
+        - Hostname : domain name or IP address
+        - Optional Port Number (8080)
+    - Path name
+![Alt text](<Screenshot 2023-10-12 at 10.24.04 PM.png>)
+
+### Path in URI vs Physical path
+- URI 의 Path와 실제 서버의 Physical path는 다르기 때문에 매핑 테이블이 존재 해야 한다. 
+- 실제 Physical path 를 사용하면 서버에 주소를 옮기면 다 바꿔야 한다.
+![Alt text](<Screenshot 2023-10-12 at 10.27.29 PM.png>)
+
+### URI: Path, Query, & Fragment
+- Logical Information
+    - In a URI, Path, Query, and Fragment are `logical information`
+- Logical Mapping
+    - The Path in a URI does not exactly correspond to that in the local file system(physical path)
+- Preparation for Various Extensions
+    - The query and fragment are resource-specific and must be processed by resource management services such as web servers -> `query와 fragment를 통해 프로그램의 argument 같은 것을 전달할 수 있다.`
 
     
