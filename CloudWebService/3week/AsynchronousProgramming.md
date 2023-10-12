@@ -70,3 +70,21 @@
 - `function cb(err,data) -> Asynchronous Execution`
 
 ### Callback vs Promise : Different Objectives
+- `Callback function`
+    - Contain code `to process result values`
+    - The processing of function result is `asynchronously performed in the context of called function`
+- `Promise object`
+    - Contain code to `confirm the result status` : success or error
+    - The processing of function result is `synchronously performed in the context of calling function`
+![Alt text](<Screenshot 2023-10-12 at 5.46.40 PM.png>)
+> 코드는 Promise가 더 복잡하지만 그만큼 더 유연하게 사용 가능
+
+### `Async&await` (How to execute Asynchronous Functions Synchronously)
+- Promise를 선호하는 이유 : Async&await와 같이 사용함으로써 거의 완벽하게 synchronous할 수 있다. 
+![Alt text](<Screenshot 2023-10-12 at 5.52.45 PM.png>)
+- `code 설명 (only promise)`
+![Alt text](<Screenshot 2023-10-12 at 5.54.14 PM.png>)
+> 높은 확률로 p3 -> p2 -> p1 순으로 실행된다.
+ - `code 설명 (with async & await)`
+ ![Alt text](<Screenshot 2023-10-12 at 5.58.52 PM.png>)
+ > 요구 사항은 Promise로 구현되어야한다.
