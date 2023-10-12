@@ -47,3 +47,26 @@
 - Error, data 두 개의 Argumnet를 취한다. 
 - Callback function안에 result를 프로세스 하는 코드를 넣어준다. 
 - Callback 함수로 Ordering을 만들 수 있다. (별도의 강의)
+
+### Promise Object
+![Alt text](<Screenshot 2023-10-12 at 5.29.57 PM.png>)
+- util.promisify를 통해 promise 객체로 변환 가능
+- then 안에 Callback 함수 같은 것을 정의 
+- Catch 를 통해 ERROR 처리
+- Promise 객체 리턴 
+- 실행 순서
+![Alt text](<Screenshot 2023-10-12 at 5.29.46 PM.png>)
+> ReadFile 이 끝나야 function(text)가 실행될 수 있다. (Asynchronous)
+
+### How to Build `Custom Promise Object`
+- 위에는 Util에 있는 Promise를 가져다 쓴 것임
+- 그럼 Promise는 어떻게 만들어 질까 ?
+![Alt text](<Screenshot 2023-10-12 at 5.32.31 PM.png>)
+- Promise 의 Argument로 들어가는 Function
+    - resolve : result값 처리
+    - reject : Error 처리
+- 이러한 구조만 알아두면 거의 모든 객체를 Promise화 시킬 수 있다.
+![Alt text](<Screenshot 2023-10-12 at 5.36.44 PM.png>)
+- `function cb(err,data) -> Asynchronous Execution`
+
+### Callback vs Promise : Different Objectives
