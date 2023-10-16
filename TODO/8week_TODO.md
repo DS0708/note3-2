@@ -46,30 +46,30 @@
 ---
 ---
 
-### `MonDay October 09` (6h) 9h 25m
+### `MonDay October 16` (6h) 9h 25m
 - [x] L10~L12 `선대` (2h) 2h 25m
 - [x] 랜프 총정리       - (2h) 3h 25m
 - [x] 족보 기출 풀기 `선대` (2h) 3h 35m
 
-### `TuesDay October 10` (6h 30m)
+### `TuesDay October 17` (6h 30m)
 - [ ] 시험 정리 `UX_Design`   (2h)
 - [ ] 중간고사 준비 `대소사`    (30m)
 - [ ] 전체 강의자료 시험 전 읽기 `프통문` (1h)
 - [ ] `팀프로젝트` On-Premise 버전 보고서 작성 `(1018일까지)`   (3h)
 
-### `WednesDay October 11` 
+### `WednesDay October 18` 
 
 
-### `ThursDay October 12`
+### `ThursDay October 19`
 
 
-### `FriDay October 13`
+### `FriDay October 20`
 
 
-### `SaturDay October 14`
+### `SaturDay October 21`
 
 
-### `SunDay October 15` 
+### `SunDay October 22` 
 
 
 
