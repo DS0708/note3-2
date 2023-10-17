@@ -51,14 +51,13 @@
 - [x] 랜프 총정리       - (2h) 3h 25m
 - [x] 족보 기출 풀기 `선대` (2h) 3h 35m
 
-### `TuesDay October 17` (6h 30m)
+### `TuesDay October 17` (3h 30m)
 - [ ] 시험 정리 `UX_Design`   (2h)
-- [ ] 중간고사 준비 `대소사`    (30m)
+- [x] 중간고사 준비 `대소사`    (30m) (1h 30m)
 - [ ] 전체 강의자료 시험 전 읽기 `프통문` (1h)
-- [ ] `팀프로젝트` On-Premise 버전 보고서 작성 `(1018일까지)`   (3h)
 
 ### `WednesDay October 18` 
-
+- [ ] `팀프로젝트` On-Premise 버전 보고서 작성 `(1018일까지)`   (3h)
 
 ### `ThursDay October 19`
 
