@@ -1,5 +1,13 @@
 # UX_Design 9강 프로토타이핑
 
+## 모바일 UX 디자인의 기본
+1. 사용자 리서치 (User Research) - 니즈 & 동기
+2. 아이디어 탐구 (Ideation) - 스케치
+3. 모바일 패턴 (Mobile Pattern) - 웹, 안드로이드, IOS 우수 사례 - 사용자의 기본 기대 만족
+4. 솔루션 (Solution) - Wireframe & Mock-up
+5. `프로토타이핑 (Prototyping) - 시뮬레이션`
+6. 사용자 테스팅 (User Testing) - Usability
+
 ## 내용
 1. 개요
 2. 프로토타이핑 사고방식 채택하기
