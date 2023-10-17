@@ -1,6 +1,6 @@
 # UX_Design 시험에 나올만한 것 정리
 
-## Lecture01
+## Lecture01_Introduction
 1. UX의 정의 :
     - User eXperience : 사용자 경험은 특정 제품, 시스템 혹은 서비스를 사용하는 사람의 `감정과 태도`를 의미
 2. UX디자인의 목적 및 기대효과
