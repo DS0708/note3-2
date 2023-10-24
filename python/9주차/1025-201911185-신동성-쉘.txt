@@ -1,0 +1,37 @@
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/9주차/1025-201911185
+-신동성-1.py"
+정수 입력:19
+합 : 190
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/9주차/1025-201911185
+-신동성-1.py"
+정수 입력:10
+합 : 55
+85-신동성-2.py"
+정수 입력:10
+합 : 55
+ ds@sindongseong-ui-MacBookAir  ~  python -u "/Users/ds/ds_study/note3-2/python/9주차/1025-201911185
+-신동성-1.py"
+정수 입력:10
+합 : 55
+85-신동성-2.py"
+정수 입력:10
+합 : 55
+85-신동성-2.py"
+정수 입력:10
+합 : 45
+85-신동성-1.py"
+정수 입력:10
+합 : 45
+85-신동성-3.py"
+정수 입력:10
+합 = 45
+1185-신동성-3.py"
+정수 입력:10
+합 = 55
+85-신동성-2.py"
+정수 입력:10
+합 : 55
+85-신동성-1.py"
+정수 입력:10
+합 : 55
+
