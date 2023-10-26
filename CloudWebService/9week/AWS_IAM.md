@@ -67,3 +67,47 @@
 ![Alt text](<Screenshot 2023-10-26 at 8.23.42 AM.png>)
 ![Alt text](<Screenshot 2023-10-26 at 8.23.48 AM.png>)
 > 이런식으로 코드 상에서 사용 가능
+
+## Authorization
+![Alt text](<Screenshot 2023-10-26 at 12.22.36 PM.png>)
+> 플랫폼을 공부할때는 전체적으로 공부하고 필요한 것을 세부적으로 해야함.
+- Access `Policies` (Rules)
+- Access `Control` (Runtime System)
+![Alt text](<Screenshot 2023-10-26 at 12.24.16 PM.png>)
+
+## Permission & Policy
+- Permission
+    - A single Instance of Access Rule
+    - Rule : (`Identity`, `Actions` on Resource, `Resource`)
+- Policy
+    - 퍼미션들의 집합
+        - Permission : (?,Action,Resource)
+        - Attached to IAM Identity
+        ![Alt text](<Screenshot 2023-10-26 at 12.26.13 PM.png>)
+
+### Policy
+- AWS Managed Policies 
+    - AWS가 만들어놓은 `흔히 사용되는 케이스`
+    - ARN
+- Customer Managed Policies
+    - Policies created by IAM users as AWS Resources with ARNs
+- Inline Policies
+    - No ARNs
+    - Policies embedded in IAM Users
+![Alt text](<Screenshot 2023-10-26 at 12.32.33 PM.png>)
+
+## Access Management : Permissions & Policies Creation
+![Alt text](<Screenshot 2023-10-26 at 12.35.08 PM.png>)
+> 실습 때 만들어 볼 것
+
+## Attach Policy to User Group
+- Policy 만든 것을 그룹에 권한에 추가 가능
+
+## Attach Policy to IAM User
+- 그룹이 가지고 있는 권한을 줄 수 있고
+- 개별적으로 또 다른 Policy도 부여할 수 있다.
+
+> 강의자료가 너무 오래돼서 자세한 건 실습을 통해 하기
+
+
+
