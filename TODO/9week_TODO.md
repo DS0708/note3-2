@@ -36,7 +36,7 @@
 [팀플 깃허브 백](https://github.com/woo4826/Cloud-Web-Service-SNS-server)
 
 ### `선형대수학`
-- [ ] QR factorization 강의 듣기
+- [x] QR factorization 강의 듣기
 - [ ] PRJ1 `11월 09일`
 
 ### `프로그래밍을 통한 문제 해결`
@@ -107,8 +107,7 @@
 - [x] 도서관 봉사활동 `10월 29일, 09시 ~ 01시`
 - [x] `클웹` 9주차 3차시 강의
 - [x] `클웹` 9주차 4차시 강의
-- [ ] `선대` QR factorization 강의 듣기
+- [x] `선대` QR factorization 강의 듣기
 - [ ] `랜프` 9주차 2차시 강의
-- [ ] `팀플` AWS 서비스 조사 `11월 01일 까지`
 
 
