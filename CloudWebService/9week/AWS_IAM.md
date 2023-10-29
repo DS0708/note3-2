@@ -75,6 +75,8 @@
 - Access `Control` (Runtime System)
 ![Alt text](<Screenshot 2023-10-26 at 12.24.16 PM.png>)
 
+# AWS IAM (Identity and Access Management) : `Authorization` (part 1 : Attach Policy to Identity)
+
 ## Permission & Policy
 - Permission
     - A single Instance of Access Rule
@@ -108,6 +110,71 @@
 - 개별적으로 또 다른 Policy도 부여할 수 있다.
 
 > 강의자료가 너무 오래돼서 자세한 건 실습을 통해 하기
+
+# AWS IAM (Identity and Access Management) : `Authorization` (part 2 : Attach Policy to AWS Service) `Role`
+![Alt text](<Screenshot 2023-10-29 at 9.34.43 PM.png>)
+
+## IAM Identity : Users vs AWS Service
+![Alt text](<Screenshot 2023-10-29 at 9.36.50 PM.png>)
+- Users : Identity 에 대한 퍼미션은 파란색
+- AWS Service : AWS Service 에 대한 것은 빨간색
+
+## Role
+![Alt text](<Screenshot 2023-10-29 at 9.42.44 PM.png>)
+- Role는 Identity가 아닌 AWS Service에 권한을 주기 위해 만든 것.
+- 즉 권한을 가지는 주체가 AWS Service라고 생각하면 됨
+
+## Role For EC2
+- EC2에게 S3를 Full Access 할 수 있는 퍼미션을 주는 것도 가능
+![Alt text](<Screenshot 2023-10-29 at 9.47.54 PM.png>)
+- 대표적으로 AWS Service는 다음과 같이 크게 3가지로 나뉘어짐
+
+## 방법 (Role creation)
+1. Role creation 
+2. AWS Service 중 EC2 선택
+3. Choose Permission Policy
+    - AWS 가 기본적을 만들어놓은 것들도 있음
+    - AmazonS3FullAccess 선택
+4. Name 설정 
+5. Create Role
+6. 결과화면 (Review)
+    ![Alt text](<Screenshot 2023-10-29 at 9.50.25 PM.png>)
+    ![Alt text](<Screenshot 2023-10-29 at 9.50.50 PM.png>)
+
+## EC2 Instance : Attach Role
+1. Instances에서 권한을 줄 해당 EC2 선택
+2. Instance Setting에 Attach/Replace IAM Role 선택
+3. 아까 만들어 놓은 Role 선택 후 Apply
+4. 성공 메시지
+5. 결과 화면
+    ![Alt text](<Screenshot 2023-10-29 at 9.53.38 PM.png>)
+> 장점 : 아이디 패스워드 없이 서버에게 퍼미션을 줄 수 있음
+
+## Role For `Rambda`
+1. Create Policy for Rambda
+2. Select Service
+    - ex) IoT에 대한 서비스 와 액션 선택
+3. Select Resources
+    - All resources 선택함
+4. Name, Review & Create
+5. Create Role
+6. AWS Service로 람다 선택
+7. 만들어놨던 Policy선택
+8. Create Role
+
+## Lambda : Role
+1. Function name 
+2. Runtime 엔진 설정
+3. Role 설정
+4. Create Lambda function
+
+## Role for `IoT Rules` to Invoke S3
+1. Create Rule
+2. Rule에 연결될 서비스 선택 (S3 선택)
+3. Action 선택 (S3 버킷, Key 등 선택)
+4. create role 선택
+    - 이전과의 차이는 자동적으로 Role이 생성된다. (AWS가 알아서 생성)
+5. Add Action
 
 
 
