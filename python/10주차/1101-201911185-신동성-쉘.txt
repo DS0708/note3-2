@@ -1,0 +1,152 @@
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/10주차   main ±  python -u "/Users/ds/ds_study/note3-2/python/10주차/1101-201911185-신동성-1.py"
+[12, 10, 27, 5, 7, 96]
+찾고자 하는 수는?>>>7
+
+index0 : 12
+index1 : 10
+index2 : 27
+index3 : 5
+index4 : 7
+
+인덱스[4]에서 검색 성공!
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/10주차   main ±  python -u "/Users/ds/ds_study/note3-2/python/10주차/1101-201911185-신동성-1.py"
+[12, 10, 27, 5, 7, 96]
+찾고자 하는 수는?>>>12
+
+index0 : 12
+
+인덱스[0]에서 검색 성공!
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/10주차   main ±  python -u "/Users/ds/ds_study/note3-2/python/10주차/1101-201911185-신동성-1.py"
+[12, 10, 27, 5, 7, 96]
+찾고자 하는 수는?>>>99
+
+index0 : 12
+index1 : 10
+index2 : 27
+index3 : 5
+index4 : 7
+index5 : 96
+검색 실패 !
+ ✘ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2   main ±  python -u "/Users/ds/ds_study/note3-2/python/10주차/1101-201911185-신동성-1.py"
+입력할 수는?>>>1
+입력할 수는?>>>2
+입력할 수는?>>>3
+입력할 수는?>>>-1
+[1, 2, 3]
+찾고자 하는 수는?>>>5
+
+index0 : 1
+index1 : 2
+index2 : 3
+
+검색 실패 !
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/선형대수학/prj1   main ±  python -u "/Users/ds/ds_study/note3-2/python/10주차/1101-201911185-신동성-2.py"
+입력할 수는?>>>1
+입력할 수는?>>>2
+입력할 수는?>>>3
+입력할 수는?>>>4
+입력할 수는?>>>-1
+[1, 2, 3, 4]
+찾고자 하는 수는?>>>2
+
+index0 : 1
+index1 : 2
+
+인덱스[1]에서 검색 성공!
+ ✘ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/10주차   main ±  python -u "/Users/ds/ds_study/note3-2/python/10주차/1101-201911185-신동성-3.py"
+입력할 수는?>>>4
+입력할 수는?>>>5
+입력할 수는?>>>6
+입력할 수는?>>>7
+입력할 수는?>>>3
+입력할 수는?>>>4
+입력할 수는?>>>5
+입력할 수는?>>>2
+입력할 수는?>>>4
+입력할 수는?>>>1
+[4, 5, 6, 7, 3, 4, 5, 2, 4, 1]
+
+[1, 2, 3, 4, 4, 4, 5, 5, 6, 7]
+ ✘ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/선형대수학/prj1   main ±  python -u "/Users/ds/ds_study/note3-2/python/10주차/1101-201911185-신동성-3.py"
+[15, 20, 29, 30, 37, 55, 69, 73, 87, 90]
+찾으려는 값?>>69
+인덱스=4, 리스트값=37
+인덱스=7, 리스트값=73
+인덱스=5, 리스트값=55
+인덱스=6, 리스트값=69
+값 69를 찾았습니다. 인덱스: 6
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/선형대수학/prj1   main ±  python -u "/Users/ds/ds_study/note3-2/python/10주차/1101-201911185-신동성-3.py"
+[15, 20, 29, 30, 37, 55, 69, 73, 87, 90]
+찾으려는 값?>>69
+인덱스=4, 리스트값=37
+인덱스=7, 리스트값=73
+인덱스=5, 리스트값=55
+인덱스=6, 리스트값=69
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/선형대수학/prj1   main ±  python -u "/Users/ds/ds_study/note3-2/python/10주차/1101-201911185-신동성-3.py"
+[15, 20, 29, 30, 37, 55, 69, 73, 87, 90]
+찾으려는 값?>>99
+인덱스=4, 리스트값=37
+인덱스=7, 리스트값=73
+인덱스=8, 리스트값=87
+인덱스=9, 리스트값=90
+검색 실패 !
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/선형대수학/prj1   main ±  python -u "/Users/ds/ds_study/note3-2/python/10주차/1101-201911185-신동성-3.py"
+[15, 20, 29, 30, 37, 55, 69, 73, 87, 90]
+찾으려는 값?>>56
+인덱스=4, 리스트값=37
+인덱스=7, 리스트값=73
+인덱스=5, 리스트값=55
+인덱스=6, 리스트값=69
+찾는 값 56 없음
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/10주차   main ±  python -u "/Users/ds/ds_study/note3-2/python/10주차/1101-201911185-신동성-4.py"
+[15, 20, 29, 30, 37, 55, 69, 73, 87, 90]
+찾으려는 값?>>88
+
+인덱스=4, 리스트값=37
+인덱스=7, 리스트값=73
+인덱스=8, 리스트값=87
+인덱스=9, 리스트값=90
+인덱스=8, 리스트값=87
+인덱스=8, 리스트값=87
+인덱스=8, 리스트값=87
+인덱스=8, 리스트값=87
+인덱스=8, 리스트값=87
+인덱스=8, 리스트값=87
+
+찾는 값 88 없음 !
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/10주차   main ±  python -u "/Users/ds/ds_study/note3-2/python/10주차/1101-201911185-신동성-4.py"
+[15, 20, 29, 30, 37, 55, 69, 73, 87, 90]
+찾으려는 값?>>38
+
+인덱스=4, 리스트값=37
+인덱스=7, 리스트값=73
+인덱스=5, 리스트값=55
+
+찾는 값 38 없음 !
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/10주차   main ±  python -u "/Users/ds/ds_study/note3-2/python/10주차/1101-201911185-신동성-4.py"
+[15, 20, 29, 30, 37, 55, 69, 73, 87, 90]
+찾으려는 값?>>73
+
+인덱스=4, 리스트값=37
+인덱스=7, 리스트값=73
+
+총 2번 만에 성공!
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/10주차   main ±  python -u "/Users/ds/ds_study/note3-2/python/10주차/1101-201911185-신동성-4.py"
+[15, 20, 29, 30, 37, 55, 69, 73, 87, 90]
+찾으려는 값?>>55
+
+인덱스=4, 리스트값=37
+인덱스=7, 리스트값=73
+인덱스=5, 리스트값=55
+
+총 3번 만에 성공!
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/10주차   main ±  python -u "/Users/ds/ds_study/note3-2/python/10주차/1101-201911185-신동성-4.py"
+[15, 20, 29, 30, 37, 55, 69, 73, 87, 90]
+찾으려는 값?>>91
+
+인덱스=4, 리스트값=37
+인덱스=7, 리스트값=73
+인덱스=8, 리스트값=87
+인덱스=9, 리스트값=90
+
+찾는 값 91 없음 !
