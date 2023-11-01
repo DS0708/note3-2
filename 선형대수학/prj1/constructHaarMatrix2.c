@@ -9,17 +9,28 @@
 
 
 double** constructHaarMatrixRecursive(int n);
+double** constructHaarMatrixRecursive2(int n);
+double** constructHaarMatrixRecursive512(int n);
 double** concatenateTwoMatrices(double** hl, double** hr, int n);
-double** applyKroneckerProduct(double** A, int n, double a, double b); 
+double** applyKroneckerProduct(double** A, int n, double a, double b);
 
 void printMatrix(double** A, int m, int n, char name[]); 
 double** constructIdentity(int k); 
 double** allocateMemory(int m, int n); 
 void releaseMemory(double** A, int m);
 
+double** normalizeHaarMatrix(double** H, int n); 
+double** multiplyTwoMatrices(double** A, int m, int n, double** B, int l, int k);
+double** multiplyTwoSquareMatrices(double** A, double** B, int n);
+double** transposeMatrix(double** A, int m, int n);
+double** normalizeVector(double** v, int n);
+double calculateLength(double** v, int m);
+double** scaleMatrix(double** A, int m, int n,int c);
+double** addTwoMatrices(double** A, int m, int n, double** B, int l, int k);
 
+/*
 int main() {
-	int n = 4;
+	int n = 8;
 
 	double** H = constructHaarMatrixRecursive(n);
 
@@ -31,38 +42,39 @@ int main() {
 	//printMatrix(I,n,n,"I");
 	//releaseMemory(I, n);
 }
+*/
 
-
-// double** constructHaarMatrixRecursive(int n) {
-// 	double** h;
-// 	if (n > 2)
-// 		h = constructHaarMatrixRecursive(n/2);
-// 	else {
-// 		//double** h;
-// 		h = allocateMemory(2,2);
-// 		h[0][0] = 1; h[0][1] = 1; h[1][0] = 1; h[1][1] = -1; //H = [1 1; 1 -1]
-// 		return h; 
-// 	}
-
-// 	// construct the left half (Kronecket product of h and [1;1])
-// 	double** Hl = applyKroneckerProduct(h, n, 1, 1);
-// 	releaseMemory(h, n/2);
-
-// 	// construct the right half (Kronecker product of I and [1;-1])
-// 	double** I = constructIdentity(n/2);
-// 	double** Hr = applyKroneckerProduct(I, n, 1, -1); 
-// 	releaseMemory(I, n/2);
-
-
-// 	// merge hl and hr
-// 	double** H = concatenateTwoMatrices(Hl, Hr, n); //H = [Hl Hr]
-// 	releaseMemory(Hl, n);
-// 	releaseMemory(Hr, n);
-
-// 	return H;
-// }
 
 double** constructHaarMatrixRecursive(int n) {
+	double** h;
+	if (n > 2)
+		h = constructHaarMatrixRecursive(n/2);
+	else {
+		//double** h;
+		h = allocateMemory(2,2);
+		h[0][0] = 1; h[0][1] = 1; h[1][0] = 1; h[1][1] = -1; //H = [1 1; 1 -1]
+		return h; 
+	}
+
+	// construct the left half (Kronecket product of h and [1;1])
+	double** Hl = applyKroneckerProduct(h, n, 1, 1);
+	releaseMemory(h, n/2);
+
+	// construct the right half (Kronecker product of I and [1;-1])
+	double** I = constructIdentity(n/2);
+	double** Hr = applyKroneckerProduct(I, n, 1, -1); 
+	releaseMemory(I, n/2);
+
+
+	// merge hl and hr
+	double** H = concatenateTwoMatrices(Hl, Hr, n); //H = [Hl Hr]
+	releaseMemory(Hl, n);
+	releaseMemory(Hr, n);
+
+	return H;
+}
+
+double** constructHaarMatrixRecursive2(int n) {
     double** h;
     if (n > 2)
         h = constructHaarMatrixRecursive(n / 2);
@@ -95,6 +107,46 @@ double** constructHaarMatrixRecursive(int n) {
 
     return H;
 }
+
+double** constructHaarMatrixRecursive512(int n) {
+    double** h = allocateMemory(n, n);
+
+    if (n == 2) {
+        h[0][0] = 1.0;
+        h[0][1] = 1.0;
+        h[1][0] = 1.0;
+        h[1][1] = -1.0;
+
+        // 정규화: 모든 요소를 sqrt(2.0)로 나눠줍니다.
+        double norm = sqrt(2.0);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                h[i][j] /= norm;
+            }
+        }
+    } else {
+        // 크기가 2x2 이 아닌 경우, 재귀적으로 Haar 행렬을 구성합니다.
+        double** h_sub = constructHaarMatrixRecursive512(n / 2);
+        double** I = constructIdentity(n / 2);
+
+        // 왼쪽 절반 (Kronecker product of h_sub and [1; 1])
+        double** Hl = applyKroneckerProduct(h_sub, n, 1.0, 1.0);
+        releaseMemory(h_sub, n / 2);
+
+        // 오른쪽 절반 (Kronecker product of I and [1; -1])
+        double** Hr = applyKroneckerProduct(I, n, 1.0, -1.0);
+        releaseMemory(I, n / 2);
+
+        // 두 부분을 합치기
+        h = concatenateTwoMatrices(Hl, Hr, n);
+        releaseMemory(Hl, n);
+        releaseMemory(Hr, n);
+    }
+
+    return h;
+}
+
+
 
 
 double** applyKroneckerProduct(double** A, int n, double a, double b) {
@@ -181,3 +233,104 @@ void releaseMemory(double** A, int m) {
 // 	return I;
 // }
 	
+double** normalizeHaarMatrix(double** H, int n) {
+    double** normalized_H = allocateMemory(n, n);
+
+    for (int j = 0; j < n; j++) {
+        double length = 0.0;
+        for (int i = 0; i < n; i++) {
+            length += H[i][j] * H[i][j];
+        }
+        length = sqrt(length);
+
+        for (int i = 0; i < n; i++) {
+            normalized_H[i][j] = H[i][j] / length;
+        }
+    }
+
+    return normalized_H;
+}
+
+double **multiplyTwoMatrices(double **A, int m, int n, double **B, int l, int k)
+{	
+	if (n != l) return NULL;
+
+	double** C = allocateMemory(m,k);
+
+	for(int i=0 ; i<m ; i++){
+		for (int j=0 ; j<k ; j++){
+			for(int k=0; k<n ; k++){
+				C[i][j] += A[i][k] * B[k][j];
+			} 
+		}
+	}
+
+    return C;
+}
+
+double** multiplyTwoSquareMatrices(double** A, double** B, int n){
+	return multiplyTwoMatrices(A,n,n,B,n,n);
+}
+
+double** transposeMatrix(double **A, int m, int n) {
+	double** B = allocateMemory(n, m);
+
+	for (int i = 0; i < m; i++)
+		for (int j = 0; j < n; j++)
+			B[j][i] = A[i][j];	
+	
+	return B;
+}
+
+double** normalizeVector(double** v, int m) {
+	double** w;
+	double len = 0.0;
+
+	for (int i = 0; i < m; i++)
+		len += v[i][0]*v[i][0];	
+	len = sqrt(len);
+
+	w = allocateMemory(m,1);
+	for (int i = 0; i < m; i++)
+		w[i][0] = v[i][0]/len;
+	
+	return w;
+}
+
+double calculateLength(double **v, int m)
+{	
+	double len = 0.0;
+
+	for (int i=0; i<m ; i++){
+		len += v[i][0]*v[i][0];
+	}
+
+    return sqrt(len);
+}
+
+double **scaleMatrix(double **A, int m, int n, int c)
+{	
+	double** B = allocateMemory(m, n);
+
+	for (int i = 0; i < m; i++)
+		for (int j = 0; j < n; j++)
+			B[i][j] = A[i][j]*c;	
+	
+	return B;
+}
+
+
+double **addTwoMatrices(double **A, int m, int n, double **B, int l, int k)
+{
+	if (m!=l || n!=k) return NULL;
+
+	double** C = allocateMemory(m,k);
+
+	for(int i=0; i<m ; i++){
+		for(int j=0; j<n ; j++){
+			C[i][j] = A[i][j] + B[i][j];
+		}
+	}
+
+    return C;
+}

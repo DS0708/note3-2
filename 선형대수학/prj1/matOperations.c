@@ -1,36 +1,61 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-// #include "constructHaarMatrix2.c"
+#include "constructHaarMatrix2.c"
 
 //functions for convenience
+/*
 double** allocateMemory(int m, int n); 
 void releaseMemory(double** A, int m);
 void printMatrix(double** A, int m, int n, char name[]);
+*/
 
 //functions to implement in prj0
 //transposeMatrix, normalizeVector, calculateLength
 //scaleMatrix, multiplyTwoMatrices, addTwoMatrices
-double** transposeMatrix(double** A, int m, int n);
-double** normalizeVector(double** v, int n);
-double calculateLength(double** v, int m);
-double** scaleMatrix(double** A, int m, int n,int c);
-double** multiplyTwoMatrices(double** A, int m, int n, double** B, int l, int k);
-double** addTwoMatrices(double** A, int m, int n, double** B, int l, int k);
 void problem_2_b();
 
 
-int main() {
-	double** A;
-	double** B;
-	double** C;
-	double** D;
-	double** E;
-	double** v; //vector
-	double** w;	//vector
-	int m = 5; 	//number of rows
-	int n = 10;	//number of columns
 
+int main() {
+
+	//Test Haar Matrix
+	// int m = 3;
+	// double** H;
+	// double** H_T;
+	// H = constructHaarMatrixRecursive(m);
+	// printMatrix(H,m,m,"Haar Matirx");
+	// releaseMemory(H, m);
+
+	int n = 8;
+
+	double** H = normalizeHaarMatrix(constructHaarMatrixRecursive(n),n);
+	double** H_T = transposeMatrix(H,n,n);
+	double** HXHT = multiplyTwoSquareMatrices(H,H_T,n);
+	double** scale_Matirx = scaleMatrix(HXHT,n,n,3);
+
+	printMatrix(H,n,n,"H");
+	printMatrix(H_T,n,n,"H_T");
+	printMatrix(HXHT,n,n,"HXHT");
+	printMatrix(scale_Matirx,n,n,"H Scaled");
+
+
+	releaseMemory(H, n);
+	releaseMemory(H_T,n);
+	releaseMemory(HXHT,n);
+	releaseMemory(scale_Matirx,n);
+
+	// double** A;
+	// double** B;
+	// double** C;
+	// double** D;
+	// double** E;
+	// double** v; //vector
+	// double** w;	//vector
+	//int m = 3; 	//number of rows
+	// int n = 10;	//number of columns
+
+	/*
 	//Test transposeMatrix
 	A = allocateMemory(m,n);
 	for (int i = 0; i < m; i++)
@@ -73,21 +98,23 @@ int main() {
 	printMatrix(w,m,1,"v_normalized");
 
 	problem_2_b();
+	*/
 
 	//release all the memory allocated
-	releaseMemory(A, m);
-	releaseMemory(B, n);
-	releaseMemory(C, m);
-	releaseMemory(D, m);
-	releaseMemory(E, m);
-	releaseMemory(v, m);
-	releaseMemory(w, m);
+	// releaseMemory(A, m);
+	// releaseMemory(B, n);
+	// releaseMemory(C, m);
+	// releaseMemory(D, m);
+	// releaseMemory(E, m);
+	// releaseMemory(v, m);
+	// releaseMemory(w, m);
 
 	return 0;
 }
 
 
 //functions for convenience
+/*
 double** allocateMemory(int m, int n) {
 	double** A;
 	A = (double**) malloc(sizeof(double*) * m);
@@ -112,86 +139,10 @@ void printMatrix(double** A, int m, int n, char name[]) {
 		printf("\n");
 	}
 }
+*/
 
-//functions to implement in prj0 
-double** transposeMatrix(double **A, int m, int n) {
-	double** B = allocateMemory(n, m);
+//functions to implement in prj0 	
 
-	for (int i = 0; i < m; i++)
-		for (int j = 0; j < n; j++)
-			B[j][i] = A[i][j];	
-	
-	return B;
-}	
-
-double** normalizeVector(double** v, int m) {
-	double** w;
-	double len = 0.0;
-
-	for (int i = 0; i < m; i++)
-		len += v[i][0]*v[i][0];	
-	len = sqrt(len);
-
-	w = allocateMemory(m,1);
-	for (int i = 0; i < m; i++)
-		w[i][0] = v[i][0]/len;
-	
-	return w;
-}
-
-double calculateLength(double **v, int m)
-{	
-	double len = 0.0;
-
-	for (int i=0; i<m ; i++){
-		len += v[i][0]*v[i][0];
-	}
-
-    return sqrt(len);
-}
-
-double **scaleMatrix(double **A, int m, int n, int c)
-{	
-	double** B = allocateMemory(m, n);
-
-	for (int i = 0; i < m; i++)
-		for (int j = 0; j < n; j++)
-			B[i][j] = A[i][j]*c;	
-	
-	return B;
-}
-
-double **multiplyTwoMatrices(double **A, int m, int n, double **B, int l, int k)
-{	
-	if (n != l) return NULL;
-
-	double** C = allocateMemory(m,k);
-
-	for(int i=0 ; i<m ; i++){
-		for (int j=0 ; j<k ; j++){
-			for(int k=0; k<n ; k++){
-				C[i][j] += A[i][k] * B[k][j];
-			} 
-		}
-	}
-
-    return C;
-}
-
-double **addTwoMatrices(double **A, int m, int n, double **B, int l, int k)
-{
-	if (m!=l || n!=k) return NULL;
-
-	double** C = allocateMemory(m,k);
-
-	for(int i=0; i<m ; i++){
-		for(int j=0; j<n ; j++){
-			C[i][j] = A[i][j] + B[i][j];
-		}
-	}
-
-    return C;
-}
 
 void problem_2_b()
 {
@@ -246,3 +197,7 @@ void problem_2_b()
 	releaseMemory(C,m);
 	releaseMemory(temp,m);
 }
+
+
+
+

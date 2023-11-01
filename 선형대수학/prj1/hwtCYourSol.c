@@ -82,13 +82,17 @@ int main() {
 		for (int j = 0; j < imgWidth; j++)
 			A[i][j] = image[(i*imgWidth+j)*bytesPerPixel];
 
-	printMatrixInt(A, imgHeight, imgWidth, "A: Original image matrix");
+	// printMatrixInt(A, imgHeight, imgWidth, "A: Original image matrix");
 
 	//Haar matrix H 구성 (orthonormal column을 갖도록 구성)
 	int n = imgHeight; //이미지가 정사각형(Height==Width)이라고 가정; n = 2^t,t=0,1,2,...
+	double ** H = normalizeHaarMatrix(constructHaarMatrixRecursive(n),n);
+	// printMatrix(H,n,n,"H");
 	//...
 
 	//HWT 수행: 행렬곱 B = H'*A*H
+	double ** B = multiplyTwoSquareMatrices(transposeMatrix(H,n,n),multiplyTwoSquareMatrices(A,H,n),n);
+	// printMatrix(B,n,n,"B");
 	//...
 
 	//행렬 B 자르기: B의 upper left corner(subsquare matrix)를 잘라 Bhat에 저장
