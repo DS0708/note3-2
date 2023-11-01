@@ -85,7 +85,7 @@
 - [x] `선대과제` PRJ1 `11월 09일` Haar Matrix normalize
 - [x] 스프링부트와 AWS로 혼자 구현하는 웹 서비스 `4장-3`
 - [ ] `프통문` 1011 과제 
-- [ ] `선대` Cramer's rule
+- [x] `선대` Cramer's rule
 
 ### `ThursDay November 02` 
 - [ ] `선대` 10-2 강의
