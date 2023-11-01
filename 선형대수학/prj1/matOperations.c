@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+// #include "constructHaarMatrix2.c"
 
 //functions for convenience
 double** allocateMemory(int m, int n); 
@@ -18,7 +19,7 @@ double** multiplyTwoMatrices(double** A, int m, int n, double** B, int l, int k)
 double** addTwoMatrices(double** A, int m, int n, double** B, int l, int k);
 void problem_2_b();
 
-/*
+
 int main() {
 	double** A;
 	double** B;
@@ -84,7 +85,7 @@ int main() {
 
 	return 0;
 }
-*/
+
 
 //functions for convenience
 double** allocateMemory(int m, int n) {

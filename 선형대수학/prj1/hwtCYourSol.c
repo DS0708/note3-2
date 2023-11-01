@@ -46,6 +46,8 @@ BYTE* loadBitmapFile(int bytesPerPixel, BITMAPHEADER* bitmapHeader, int* imgWidt
 //비트맵 파일 쓰기
 void writeBitmapFile(int bytesPerPixel, BITMAPHEADER outputHeader, BYTE* output, int imgSize, char* filename);
 
+void printMatrixInt(int** A, int m, int n, char name[]);
+
 int main() {
 	/*******************************************************************/
 	/*************************** Read image  ***************************/
@@ -79,6 +81,8 @@ int main() {
 	for (int i = 0; i < imgHeight; i++)
 		for (int j = 0; j < imgWidth; j++)
 			A[i][j] = image[(i*imgWidth+j)*bytesPerPixel];
+
+	printMatrixInt(A, imgHeight, imgWidth, "A: Original image matrix");
 
 	//Haar matrix H 구성 (orthonormal column을 갖도록 구성)
 	int n = imgHeight; //이미지가 정사각형(Height==Width)이라고 가정; n = 2^t,t=0,1,2,...
@@ -158,3 +162,13 @@ void writeBitmapFile(int bytesPerPixel, BITMAPHEADER outputHeader, BYTE* output,
 	fwrite(output, bytesPerPixel*sizeof(BYTE), imgSize, fp);
 	fclose(fp);
 }
+
+void printMatrixInt(int** A, int m, int n, char name[]) {
+    printf("\n%s = \n", name);
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++)
+            printf("%d ", A[i][j]);
+        printf("\n");
+    }
+}
+

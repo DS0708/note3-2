@@ -5,20 +5,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "matOperations.c"
-// #include "MATRIX_METHODS.h"
+// #include "matOperations.c"
 
 
 double** constructHaarMatrixRecursive(int n);
 double** concatenateTwoMatrices(double** hl, double** hr, int n);
 double** applyKroneckerProduct(double** A, int n, double a, double b); 
 
-// void printMatrix(double** A, int m, int n, char name[]); 
+void printMatrix(double** A, int m, int n, char name[]); 
 double** constructIdentity(int k); 
-// double** allocateMemory(int m, int n); 
-// void releaseMemory(double** A, int m);
+double** allocateMemory(int m, int n); 
+void releaseMemory(double** A, int m);
 
-/*
+
 int main() {
 	int n = 4;
 
@@ -32,36 +31,71 @@ int main() {
 	//printMatrix(I,n,n,"I");
 	//releaseMemory(I, n);
 }
-*/
+
+
+// double** constructHaarMatrixRecursive(int n) {
+// 	double** h;
+// 	if (n > 2)
+// 		h = constructHaarMatrixRecursive(n/2);
+// 	else {
+// 		//double** h;
+// 		h = allocateMemory(2,2);
+// 		h[0][0] = 1; h[0][1] = 1; h[1][0] = 1; h[1][1] = -1; //H = [1 1; 1 -1]
+// 		return h; 
+// 	}
+
+// 	// construct the left half (Kronecket product of h and [1;1])
+// 	double** Hl = applyKroneckerProduct(h, n, 1, 1);
+// 	releaseMemory(h, n/2);
+
+// 	// construct the right half (Kronecker product of I and [1;-1])
+// 	double** I = constructIdentity(n/2);
+// 	double** Hr = applyKroneckerProduct(I, n, 1, -1); 
+// 	releaseMemory(I, n/2);
+
+
+// 	// merge hl and hr
+// 	double** H = concatenateTwoMatrices(Hl, Hr, n); //H = [Hl Hr]
+// 	releaseMemory(Hl, n);
+// 	releaseMemory(Hr, n);
+
+// 	return H;
+// }
 
 double** constructHaarMatrixRecursive(int n) {
-	double** h;
-	if (n > 2)
-		h = constructHaarMatrixRecursive(n/2);
-	else {
-		//double** h;
-		h = allocateMemory(2,2);
-		h[0][0] = 1; h[0][1] = 1; h[1][0] = 1; h[1][1] = -1; //H = [1 1; 1 -1]
-		return h; 
-	}
+    double** h;
+    if (n > 2)
+        h = constructHaarMatrixRecursive(n / 2);
+    else {
+        h = (double**)malloc(sizeof(double*) * 2);
+        for (int i = 0; i < 2; i++) {
+            h[i] = (double*)malloc(sizeof(double) * 2);
+        }
+        h[0][0] = 1.0; h[0][1] = 1.0; h[1][0] = 1.0; h[1][1] = -1.0; // H = [1 1; 1 -1]
+        
+        // Normalize the matrix by dividing all elements by sqrt(2).
+        double norm = sqrt(2.0);
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                h[i][j] /= norm;
+            }
+        }
+        return h;
+    }
 
-	// construct the left half (Kronecket product of h and [1;1])
-	double** Hl = applyKroneckerProduct(h, n, 1, 1);
-	releaseMemory(h, n/2);
+    // construct the left half (Kronecker product of h and [1;1])
+    double** Hl = applyKroneckerProduct(h, n, 1.0, 1.0);
 
-	// construct the right half (Kronecker product of I and [1;-1])
-	double** I = constructIdentity(n/2);
-	double** Hr = applyKroneckerProduct(I, n, 1, -1); 
-	releaseMemory(I, n/2);
+    // construct the right half (Kronecker product of I and [1;-1])
+    double** I = constructIdentity(n / 2);
+    double** Hr = applyKroneckerProduct(I, n, 1.0, -1.0);
 
+    // merge hl and hr
+    double** H = concatenateTwoMatrices(Hl, Hr, n);
 
-	// merge hl and hr
-	double** H = concatenateTwoMatrices(Hl, Hr, n); //H = [Hl Hr]
-	releaseMemory(Hl, n);
-	releaseMemory(Hr, n);
-
-	return H;
+    return H;
 }
+
 
 double** applyKroneckerProduct(double** A, int n, double a, double b) {
 	double** h = allocateMemory(n, n/2);
@@ -90,14 +124,14 @@ double** concatenateTwoMatrices(double** hl, double** hr, int n) {
 }
 
 
-// void printMatrix(double** A, int m, int n, char name[]) {
-// 	printf("\n%s = \n", name);
-// 	for (int i = 0; i < m; i++) {
-// 		for (int j = 0; j < n; j++)
-// 			printf("%lf ", A[i][j]);
-// 		printf("\n");
-// 	}
-// }
+void printMatrix(double** A, int m, int n, char name[]) {
+	printf("\n%s = \n", name);
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++)
+			printf("%lf ", A[i][j]);
+		printf("\n");
+	}
+}
 
 double** constructIdentity(int k) {
  	double** I = allocateMemory(k,k);
@@ -113,21 +147,21 @@ double** constructIdentity(int k) {
  	return I;
 }
 
-// double** allocateMemory(int m, int n) {
-// 	double** A;
-// 	A = (double**) malloc(sizeof(double*) * m);
-// 	for (int i = 0; i < m; i++) {
-// 		A[i] = (double*) malloc(sizeof(double) * n);
-// 	}
-// 	return A;
-// }
+double** allocateMemory(int m, int n) {
+	double** A;
+	A = (double**) malloc(sizeof(double*) * m);
+	for (int i = 0; i < m; i++) {
+		A[i] = (double*) malloc(sizeof(double) * n);
+	}
+	return A;
+}
 
 
-// void releaseMemory(double** A, int m) {
-// 	for (int i = 0; i < m; i++)
-// 		free(A[i]);
-// 	free(A);
-// }
+void releaseMemory(double** A, int m) {
+	for (int i = 0; i < m; i++)
+		free(A[i]);
+	free(A);
+}
 
 // float** constructIdentity(int k) {
 // 	float** I;
