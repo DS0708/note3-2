@@ -15,6 +15,9 @@ double** concatenateTwoMatrices(double** hl, double** hr, int n);
 double** applyKroneckerProduct(double** A, int n, double a, double b);
 
 void printMatrix(double** A, int m, int n, char name[]); 
+void printMatrixInt(int** A, int m, int n, char name[]);
+void printMatrixInt32X32(int** A, int m, int n, char name[]);
+void printMatrixDouble32X32(double** A, int m, int n, char name[]);
 double** constructIdentity(int k); 
 double** allocateMemory(int m, int n); 
 void releaseMemory(double** A, int m);
@@ -27,6 +30,9 @@ double** normalizeVector(double** v, int n);
 double calculateLength(double** v, int m);
 double** scaleMatrix(double** A, int m, int n,int c);
 double** addTwoMatrices(double** A, int m, int n, double** B, int l, int k);
+double** intToDoubleSquareMatrix(int** A, int m);
+int** doubleToIntSquareMatrix(double** A, int m);
+double** cutSquareMatrix(double** A, int m, int k);
 
 /*
 int main() {
@@ -43,6 +49,52 @@ int main() {
 	//releaseMemory(I, n);
 }
 */
+
+double** cutSquareMatrix(double** A, int m, int k) {
+    if (k > m) {
+        return A;
+    }
+
+    double** result = allocateMemory(m, m);
+
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < m; j++) {
+            if (i < k && j < k) {
+                result[i][j] = A[i][j]; // 처음 k x k 부분은 원래 값으로 유지
+            } else {
+                result[i][j] = 0.0; // 나머지 부분은 0으로 채움
+            }
+        }
+    }
+
+    return result;
+}
+
+
+double** intToDoubleSquareMatrix(int** A, int m) {
+    double** B = allocateMemory(m, m);
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < m; j++) {
+            B[i][j] = (double)A[i][j];
+        }
+    }
+    return B;
+}
+
+int** doubleToIntSquareMatrix(double** A, int m) {
+    int** B = (int**)malloc(sizeof(int*) * m);
+    for (int i = 0; i < m; i++) {
+        B[i] = (int*)malloc(sizeof(int) * m);
+    }
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < m; j++) {
+            B[i][j] = (int)A[i][j];
+        }
+    }
+    return B;
+}
+
+
 
 
 double** constructHaarMatrixRecursive(int n) {
@@ -184,6 +236,43 @@ void printMatrix(double** A, int m, int n, char name[]) {
 		printf("\n");
 	}
 }
+
+void printMatrixInt(int** A, int m, int n, char name[]) {
+    printf("\n%s = \n", name);
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++)
+            printf("%d ", A[i][j]);
+        printf("\n");
+    }
+}
+
+void printMatrixInt32X32(int** A, int m, int n, char name[]) {
+    printf("\n%s (First 8x8) = \n", name); // 처음 32 부분만 출력
+    int maxRows = (m > 32) ? 32 : m; // 최대 32행까지 출력
+    int maxCols = (n > 32) ? 32 : n; // 최대 32열까지 출력
+
+    for (int i = 0; i < maxRows; i++) {
+        for (int j = 0; j < maxCols; j++) {
+            printf("%d ", A[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void printMatrixDouble32X32(double** A, int m, int n, char name[]) {
+    printf("\n%s (First 32x32) = \n", name); // 처음 32x32 부분만 출력
+    int maxRows = (m > 32) ? 32 : m; // 최대 32행까지 출력
+    int maxCols = (n > 32) ? 32 : n; // 최대 32열까지 출력
+
+    for (int i = 0; i < maxRows; i++) {
+        for (int j = 0; j < maxCols; j++) {
+            printf("%lf ", A[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+
 
 double** constructIdentity(int k) {
  	double** I = allocateMemory(k,k);

@@ -46,7 +46,6 @@ BYTE* loadBitmapFile(int bytesPerPixel, BITMAPHEADER* bitmapHeader, int* imgWidt
 //비트맵 파일 쓰기
 void writeBitmapFile(int bytesPerPixel, BITMAPHEADER outputHeader, BYTE* output, int imgSize, char* filename);
 
-void printMatrixInt(int** A, int m, int n, char name[]);
 
 int main() {
 	/*******************************************************************/
@@ -82,28 +81,36 @@ int main() {
 		for (int j = 0; j < imgWidth; j++)
 			A[i][j] = image[(i*imgWidth+j)*bytesPerPixel];
 
+	//printMatrixInt32X32(A,imgHeight,imgWidth,"A: Orginal image matrix");
 	// printMatrixInt(A, imgHeight, imgWidth, "A: Original image matrix");
 
 	//Haar matrix H 구성 (orthonormal column을 갖도록 구성)
 	int n = imgHeight; //이미지가 정사각형(Height==Width)이라고 가정; n = 2^t,t=0,1,2,...
 	double ** H = normalizeHaarMatrix(constructHaarMatrixRecursive(n),n);
+	//printMatrixDouble32X32(H,n,n,"H");
 	// printMatrix(H,n,n,"H");
 	//...
 
 	//HWT 수행: 행렬곱 B = H'*A*H
-	double ** B = multiplyTwoSquareMatrices(transposeMatrix(H,n,n),multiplyTwoSquareMatrices(A,H,n),n);
-	// printMatrix(B,n,n,"B");
+	double ** B = multiplyTwoSquareMatrices(transposeMatrix(H,n,n),multiplyTwoSquareMatrices(intToDoubleSquareMatrix(A,n),H,n),n);
+	//printMatrixDouble32X32(B,n,n,"B");
+	//printMatrix(B,n,n,"B");
 	//...
 
 	//행렬 B 자르기: B의 upper left corner(subsquare matrix)를 잘라 Bhat에 저장
 	//Bhat은 B와 사이즈가 같으며 B에서 잘라서 저장한 부분 외에는 모두 0으로 채워짐
+	int s = 0;
+	int k = pow(2,s);
+	double** B_HAT = cutSquareMatrix(B,n,k);
+	// printMatrix(B_HAT,n,n,"B_HAT");
 	//...
 	
 	//IHWT 수행: Ahat = H*Bhat*H'
+	int** A_HAT = doubleToIntSquareMatrix(multiplyTwoSquareMatrices(multiplyTwoSquareMatrices(H,B_HAT,n),transposeMatrix(H,n,n),n),n);
 	//...
 
-
-
+	//printMatrixInt32X32(A,imgHeight,imgWidth,"A: Orginal image matrix");
+	//printMatrixInt32X32(A_HAT,imgHeight,imgWidth,"A hat Matirx");
 
 
 	/*******************************************************************/
@@ -111,9 +118,20 @@ int main() {
 	/*******************************************************************/
 	//Ahat을 이용해서 위의 image와 같은 형식이 되도록 구성 (즉, Ahat = [a b;c d]면 [a a a b b b c c c d d d]를 만들어야 함)
 	BYTE* Are = (BYTE*) malloc(bytesPerPixel * sizeof(BYTE) * imgSize);
+	for (int i = 0; i < imgHeight; i++) {
+    	for (int j = 0; j < imgWidth; j++) {
+        	int pixelValue = A_HAT[i][j];
+       	 pixelValue = (pixelValue < 0) ? 0 : pixelValue;
+       	 pixelValue = (pixelValue > 255) ? 255 : pixelValue;
+
+      	  for (int k = 0; k < bytesPerPixel; k++) {
+       	     Are[(i * imgWidth + j) * bytesPerPixel + k] = (BYTE)pixelValue;
+      	  	}	
+   	 	}
+	}
 	//...
 	
-	writeBitmapFile(bytesPerPixel, outputHeader, Are, imgSize, "output1.bmp");
+	writeBitmapFile(bytesPerPixel, outputHeader, Are, imgSize, "output0.bmp");
 
 
 	free(image);
@@ -122,6 +140,11 @@ int main() {
 		free(A[i]);
 	free(A);
 	free(Are);
+
+	free(H);
+	free(B);
+	free(B_HAT);
+	free(A_HAT);
 
 	return 0;
 }
@@ -167,12 +190,5 @@ void writeBitmapFile(int bytesPerPixel, BITMAPHEADER outputHeader, BYTE* output,
 	fclose(fp);
 }
 
-void printMatrixInt(int** A, int m, int n, char name[]) {
-    printf("\n%s = \n", name);
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++)
-            printf("%d ", A[i][j]);
-        printf("\n");
-    }
-}
+
 
