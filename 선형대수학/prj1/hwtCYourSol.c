@@ -99,7 +99,7 @@ int main() {
 
 	//행렬 B 자르기: B의 upper left corner(subsquare matrix)를 잘라 Bhat에 저장
 	//Bhat은 B와 사이즈가 같으며 B에서 잘라서 저장한 부분 외에는 모두 0으로 채워짐
-	int s = 0;
+	int s = 7;
 	int k = pow(2,s);
 	double** B_HAT = cutSquareMatrix(B,n,k);
 	// printMatrix(B_HAT,n,n,"B_HAT");
@@ -131,7 +131,7 @@ int main() {
 	}
 	//...
 	
-	writeBitmapFile(bytesPerPixel, outputHeader, Are, imgSize, "output0.bmp");
+	writeBitmapFile(bytesPerPixel, outputHeader, Are, imgSize, "output7.bmp");
 
 
 	free(image);
