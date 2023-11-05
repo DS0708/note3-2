@@ -56,7 +56,9 @@ int main() {
 	int imgSize, imgWidth, imgHeight;					//이미지의 크기를 저장할 변수
 	int bytesPerPixel = 3;			//number of bytes per pixel (1 byte for R,G,B respectively)
 
-	BYTE* image = loadBitmapFile(bytesPerPixel, &originalHeader, &imgWidth, &imgHeight, "image_lena_24bit.bmp"); //비트맵파일을 읽어 화소정보를 저장 (불러들이는 이미지는 .c와 같은 폴더에 저장)
+	//BYTE* image = loadBitmapFile(bytesPerPixel, &originalHeader, &imgWidth, &imgHeight, "image_lena_24bit.bmp"); //비트맵파일을 읽어 화소정보를 저장 (불러들이는 이미지는 .c와 같은 폴더에 저장)
+	//BYTE* image = loadBitmapFile(bytesPerPixel, &originalHeader, &imgWidth, &imgHeight, "highfrequency/high_frequency.bmp"); //고해상도 이미지
+	BYTE* image = loadBitmapFile(bytesPerPixel, &originalHeader, &imgWidth, &imgHeight, "lowfrequency/low_frequency.bmp"); //저해상도 이미지
 	if (image == NULL) return 0;
 
 	imgSize = imgWidth * imgHeight; // total number of pixels
@@ -99,7 +101,7 @@ int main() {
 
 	//행렬 B 자르기: B의 upper left corner(subsquare matrix)를 잘라 Bhat에 저장
 	//Bhat은 B와 사이즈가 같으며 B에서 잘라서 저장한 부분 외에는 모두 0으로 채워짐
-	int s = 7;
+	int s = 6;
 	int k = pow(2,s);
 	double** B_HAT = cutSquareMatrix(B,n,k);
 	// printMatrix(B_HAT,n,n,"B_HAT");
@@ -118,6 +120,7 @@ int main() {
 	/*******************************************************************/
 	//Ahat을 이용해서 위의 image와 같은 형식이 되도록 구성 (즉, Ahat = [a b;c d]면 [a a a b b b c c c d d d]를 만들어야 함)
 	BYTE* Are = (BYTE*) malloc(bytesPerPixel * sizeof(BYTE) * imgSize);
+
 	for (int i = 0; i < imgHeight; i++) {
     	for (int j = 0; j < imgWidth; j++) {
         	int pixelValue = A_HAT[i][j];
@@ -129,9 +132,13 @@ int main() {
       	  	}	
    	 	}
 	}
+
+
 	//...
 	
-	writeBitmapFile(bytesPerPixel, outputHeader, Are, imgSize, "output7.bmp");
+	//writeBitmapFile(bytesPerPixel, outputHeader, Are, imgSize, "output7.bmp");
+	//writeBitmapFile(bytesPerPixel, outputHeader, Are, imgSize, "highfrequency/output6.bmp");		//고해상도 Output image
+	writeBitmapFile(bytesPerPixel, outputHeader, Are, imgSize, "lowfrequency/output6.bmp");	//저해상도 Output image
 
 
 	free(image);
