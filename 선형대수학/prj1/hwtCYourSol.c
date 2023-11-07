@@ -141,7 +141,7 @@ int main()
 	// writeBitmapFile(bytesPerPixel, outputHeader, Are, imgSize, "highfrequency/output6.bmp");		//고해상도 Output image
 	// writeBitmapFile(bytesPerPixel, outputHeader, Are, imgSize, "lowfrequency/output6.bmp");	//저해상도 Output image
 
-	// problem03();
+	problem03();
 
 	double **HlT_Hl_A_HlT_Hl;
 	double **HlT_Hl_A_HhT_Hh;
