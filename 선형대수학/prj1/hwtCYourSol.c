@@ -46,6 +46,9 @@ BYTE* loadBitmapFile(int bytesPerPixel, BITMAPHEADER* bitmapHeader, int* imgWidt
 //비트맵 파일 쓰기
 void writeBitmapFile(int bytesPerPixel, BITMAPHEADER outputHeader, BYTE* output, int imgSize, char* filename);
 
+//Problem03번 관련 함수
+void problem03();
+void Generate(double** HlT_Hl_A_HlT_Hl, double** HlT_Hl_A_HhT_Hh, double** HhT_Hh_A_HlT_Hl, double** HhT_Hh_A_HhT_Hh, int** A, double** H, int n);
 
 int main() {
 	/*******************************************************************/
@@ -138,8 +141,16 @@ int main() {
 	
 	//writeBitmapFile(bytesPerPixel, outputHeader, Are, imgSize, "output7.bmp");
 	//writeBitmapFile(bytesPerPixel, outputHeader, Are, imgSize, "highfrequency/output6.bmp");		//고해상도 Output image
-	writeBitmapFile(bytesPerPixel, outputHeader, Are, imgSize, "lowfrequency/output6.bmp");	//저해상도 Output image
+	//writeBitmapFile(bytesPerPixel, outputHeader, Are, imgSize, "lowfrequency/output6.bmp");	//저해상도 Output image
 
+	//problem03();
+
+	double** HlT_Hl_A_HlT_Hl;
+	double** HlT_Hl_A_HhT_Hh;
+	double** HhT_Hh_A_HlT_Hl;
+	double** HhT_Hh_A_HhT_Hh;
+
+	Generate(HlT_Hl_A_HlT_Hl,HlT_Hl_A_HhT_Hh,HhT_Hh_A_HlT_Hl,HhT_Hh_A_HhT_Hh,A,H,n);
 
 	free(image);
 	free(output);
@@ -196,6 +207,199 @@ void writeBitmapFile(int bytesPerPixel, BITMAPHEADER outputHeader, BYTE* output,
 	fwrite(output, bytesPerPixel*sizeof(BYTE), imgSize, fp);
 	fclose(fp);
 }
+
+void problem03(){
+	printf("\n\nProblem 03\n\n");
+
+	//3-(a)
+	printf("(a)\n");
+	int n = 4;
+
+	//임의의 행렬 A 생성
+	int** A = (int**)malloc(n * sizeof(int*));
+	for (int i = 0; i < n; i++) {
+		A[i] = (int*)malloc(n * sizeof(int));
+	}
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			A[i][j] = (i+1) * (j+1);
+		}
+	}
+
+	printMatrixInt(A,n,n,"A");
+
+	//H 와 H^T 생성
+	double** H = normalizeHaarMatrix(constructHaarMatrixRecursive(n),n);
+	double** H_T = transposeMatrix(H,n,n);
+
+	printMatrix(H_T,n,n,"H^T");
+
+	//Hl , Hh 생성
+	int half_n = n / 2;
+	double** H_l = (double**)malloc(half_n * sizeof(double*));
+	double** H_h = (double**)malloc(half_n * sizeof(double*));
+
+	for (int i = 0; i < half_n; i++) {
+		H_l[i] = (double*)malloc(n * sizeof(double));
+		H_h[i] = (double*)malloc(n * sizeof(double));
+	}
+
+	for (int i = 0; i < half_n; i++) {
+		for (int j = 0; j < n; j++) {
+			H_l[i][j] = H_T[i][j];
+			H_h[i][j] = H_T[i + half_n][j];
+		}
+	}
+
+	printMatrix(H_l, half_n, n, "Hl");
+	printMatrix(H_h, half_n, n, "Hh");
+
+	//Hl^T Hh^T 생성
+	double** H_l_T = transposeMatrix(H_l,half_n,n);
+	double** H_h_T = transposeMatrix(H_h,half_n,n);
+
+	printMatrix(H_l_T,n,half_n,"Hl^T");
+	printMatrix(H_h_T,n,half_n,"Hh^T");
+
+	//DHWT B (H^T A H) 생성
+	double ** B = multiplyTwoSquareMatrices(H_T,multiplyTwoSquareMatrices(intToDoubleSquareMatrix(A,n),H,n),n);
+	printMatrix(B,n,n,"B");
+
+	//결과 출력하기
+	double** Hl_A = multiplyTwoMatrices(H_l,half_n,n,intToDoubleSquareMatrix(A,n),n,n);
+	double** Hh_A = multiplyTwoMatrices(H_h,half_n,n,intToDoubleSquareMatrix(A,n),n,n);
+
+	//H_l A H_l^T 출력
+	double** Hl_A_HlT = multiplyTwoMatrices(Hl_A,half_n,n,H_l_T,n,half_n);
+	printMatrix(Hl_A_HlT, half_n, half_n, "HlAHl^T");
+
+	//H_l A H_h^T 출력
+	double** Hl_A_HhT = multiplyTwoMatrices(Hl_A,half_n,n,H_h_T,n,half_n);
+	printMatrix(Hl_A_HhT, half_n, half_n, "HlAHh^T");
+
+	//H_h A H_l^T 출력
+	double** Hh_A_HlT = multiplyTwoMatrices(Hh_A,half_n,n,H_l_T,n,half_n);
+	printMatrix(Hh_A_HlT, half_n, half_n, "HhAHl^T");
+
+	//H_h A H_h^T 출력
+	double** Hh_A_HhT = multiplyTwoMatrices(Hh_A,half_n,n,H_h_T,n,half_n);
+	printMatrix(Hh_A_HhT, half_n, half_n, "HhAHh^T");
+
+	//3-(b)
+	printf("\n\n(b)\n");
+	
+	printMatrix(multiplyTwoSquareMatrices(H,multiplyTwoSquareMatrices(B,H_T,n),n),n,n,"(A = HBH^T)");
+
+	//Hl^THlAHl^THl
+	double** HlT_Hl_A_HlT_Hl = multiplyTwoMatrices(H_l_T,n,half_n,multiplyTwoMatrices(Hl_A_HlT,half_n,half_n,H_l,half_n,n),half_n,n);
+	printMatrix(HlT_Hl_A_HlT_Hl,n,n,"Hl^THlAHl^THl");
+
+	//Hl^THlAHh^THh
+	double** HlT_Hl_A_HhT_Hh = multiplyTwoMatrices(H_l_T, n, half_n, multiplyTwoMatrices(Hl_A_HhT, half_n, half_n, H_h, half_n, n), half_n, n);
+	printMatrix(HlT_Hl_A_HhT_Hh, n, n, "Hl^THlAHh^THh");
+
+	//Hh^THhAHl^THl
+	double** HhT_Hh_A_HlT_Hl = multiplyTwoMatrices(H_h_T, n, half_n, multiplyTwoMatrices(Hh_A_HlT, half_n, half_n, H_l, half_n, n), half_n, n);
+	printMatrix(HhT_Hh_A_HlT_Hl, n, n, "Hh^THhAHl^THl");
+
+	//Hh^THhAHh^THh
+	double** HhT_Hh_A_HhT_Hh = multiplyTwoMatrices(H_h_T, n, half_n, multiplyTwoMatrices(Hh_A_HhT, half_n, half_n, H_h, half_n, n), half_n, n);
+	printMatrix(HhT_Hh_A_HhT_Hh, n, n, "Hh^THhAHh^THh");
+
+	//결과
+	printMatrix(addFourMatrices(HlT_Hl_A_HlT_Hl,HlT_Hl_A_HhT_Hh,HhT_Hh_A_HlT_Hl,HhT_Hh_A_HhT_Hh,n,n),n,n,"HlT_Hl_A_HlT_Hl + HlT_Hl_A_HhT_Hh + HhT_Hh_A_HlT_Hl + HhT_Hh_A_HhT_Hh");
+
+	//Free
+	free(HlT_Hl_A_HlT_Hl);
+	free(HlT_Hl_A_HhT_Hh);
+	free(HhT_Hh_A_HlT_Hl);
+	free(HhT_Hh_A_HhT_Hh);
+	free(Hl_A_HlT);
+	free(Hl_A_HhT);
+	free(Hh_A_HlT);
+	free(Hh_A_HhT);
+	free(Hl_A);
+	free(Hh_A);
+	free(B);
+	free(H_l_T);
+	free(H_h_T);
+	free(H_l);
+	free(H_h);
+	free(H_T);
+	free(H);
+	free(A);
+}
+
+void Generate(double** HlT_Hl_A_HlT_Hl, double** HlT_Hl_A_HhT_Hh, double** HhT_Hh_A_HlT_Hl, double** HhT_Hh_A_HhT_Hh, int** A, double** H, int n) {
+	//H^T 생성
+	double** H_T = transposeMatrix(H,n,n);
+
+	//printMatrix(H_T,n,n,"H^T");
+
+	//Hl , Hh 생성
+	int half_n = n / 2;
+	double** H_l = (double**)malloc(half_n * sizeof(double*));
+	double** H_h = (double**)malloc(half_n * sizeof(double*));
+
+	for (int i = 0; i < half_n; i++) {
+		H_l[i] = (double*)malloc(n * sizeof(double));
+		H_h[i] = (double*)malloc(n * sizeof(double));
+	}
+
+	for (int i = 0; i < half_n; i++) {
+		for (int j = 0; j < n; j++) {
+			H_l[i][j] = H_T[i][j];
+			H_h[i][j] = H_T[i + half_n][j];
+		}
+	}
+
+	double** H_l_T = transposeMatrix(H_l,half_n,n);
+	double** H_h_T = transposeMatrix(H_h,half_n,n);
+
+	double** Hl_A = multiplyTwoMatrices(H_l,half_n,n,intToDoubleSquareMatrix(A,n),n,n);
+	double** Hh_A = multiplyTwoMatrices(H_h,half_n,n,intToDoubleSquareMatrix(A,n),n,n);
+
+	//H_l A H_l^T 출력
+	double** Hl_A_HlT = multiplyTwoMatrices(Hl_A,half_n,n,H_l_T,n,half_n);
+
+	//H_l A H_h^T 출력
+	double** Hl_A_HhT = multiplyTwoMatrices(Hl_A,half_n,n,H_h_T,n,half_n);
+
+	//H_h A H_l^T 출력
+	double** Hh_A_HlT = multiplyTwoMatrices(Hh_A,half_n,n,H_l_T,n,half_n);
+
+	//H_h A H_h^T 출력
+	double** Hh_A_HhT = multiplyTwoMatrices(Hh_A,half_n,n,H_h_T,n,half_n);
+
+	//Result
+	//Hl^THlAHl^THl
+	HlT_Hl_A_HlT_Hl = multiplyTwoMatrices(H_l_T,n,half_n,multiplyTwoMatrices(Hl_A_HlT,half_n,half_n,H_l,half_n,n),half_n,n);
+
+	//Hl^THlAHh^THh
+	HlT_Hl_A_HhT_Hh = multiplyTwoMatrices(H_l_T, n, half_n, multiplyTwoMatrices(Hl_A_HhT, half_n, half_n, H_h, half_n, n), half_n, n);
+
+	//Hh^THhAHl^THl
+	HhT_Hh_A_HlT_Hl = multiplyTwoMatrices(H_h_T, n, half_n, multiplyTwoMatrices(Hh_A_HlT, half_n, half_n, H_l, half_n, n), half_n, n);
+
+	//Hh^THhAHh^THh
+	HhT_Hh_A_HhT_Hh = multiplyTwoMatrices(H_h_T, n, half_n, multiplyTwoMatrices(Hh_A_HhT, half_n, half_n, H_h, half_n, n), half_n, n);
+
+	//Free
+	free(Hl_A_HlT);
+	free(Hl_A_HhT);
+	free(Hh_A_HlT);
+	free(Hh_A_HhT);
+	free(Hl_A);
+	free(Hh_A);
+	free(H_l_T);
+	free(H_h_T);
+	free(H_l);
+	free(H_h);
+	free(H_T);
+}
+
+
 
 
 

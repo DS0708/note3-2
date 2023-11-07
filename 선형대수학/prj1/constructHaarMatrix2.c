@@ -30,6 +30,7 @@ double** normalizeVector(double** v, int n);
 double calculateLength(double** v, int m);
 double** scaleMatrix(double** A, int m, int n,int c);
 double** addTwoMatrices(double** A, int m, int n, double** B, int l, int k);
+double** addFourMatrices(double** A, double** B, double** C, double** D, int m, int n);
 double** intToDoubleSquareMatrix(int** A, int m);
 int** doubleToIntSquareMatrix(double** A, int m);
 double** cutSquareMatrix(double** A, int m, int k);
@@ -423,3 +424,16 @@ double **addTwoMatrices(double **A, int m, int n, double **B, int l, int k)
 
     return C;
 }
+
+double** addFourMatrices(double** A, double** B, double** C, double** D, int m, int n) {
+    double** result = allocateMemory(m, n);
+
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            result[i][j] = A[i][j] + B[i][j] + C[i][j] + D[i][j];
+        }
+    }
+
+    return result;
+}
+
