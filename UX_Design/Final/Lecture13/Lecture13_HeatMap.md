@@ -152,3 +152,52 @@
 ### 시사점
 - 사용자들의 `디스플레이 해상도 분포`를 고려하여 "Average Fold" 조정함으로써, 대상 사용자 범위 결정 &larr; `Above the Fold 영역`을 대부분의 사용자들이 주목함
 - `글로벌 사용자와 국내 사용자의 디스플레이 해상도 분포`가 다르므로, 각각의 경우에 따라 웹 페이지의 "Average Fold"조정
+
+## `5. UX 디자인 개선`
+- 마우스 `스크롤 히트맵과 Average Fold`함께 분석
+- 사용자 `체류 시간과 Average Fold`함께 분석
+- `Average Fold`를 UX 디자인 개선에 활용
+
+### Average Fold & 스크롤 히트맵
+![Alt text](image-19.png)
+![Alt text](image-20.png)
+![Alt text](image-21.png)
+![Alt text](image-22.png)
+1. above the fold &rarr; 눈길체류
+2. Average Fold &rarr; Below the fold 유도
+3. Below the Fold &rarr; 오래 머무르도록 유도
+---
+![Alt text](image-23.png)
+![Alt text](image-24.png)
+![Alt text](image-25.png)
+> Average Fold에서 애매하게 끊어 스크롤을 내리도록 유도한다.
+
+## `6. 사용자 탐색 분석`
+- `스트림 (Stream) `해석 방법 - `사용자 탐색 순차` 파악
+- 사용자의 `응시 지점과 지점 별 체류 시간` 산출
+- `플롯 (Plot)그래프로` 표현 - 개별 사용자의 흐름 파악
+- 스트림은 전체 사용자는 물론 세그먼트 별로 세분화된 각 그루 별 `사용자의 평균 행동 흐름` 파악
+
+### 스트림 (Stream)
+- 사용자의 `평균적인 콘텐츠 소비 흐름`
+- 마우스 `포인터 이동 흐름의 순차` : 원을 연결하는 선과 원 안의 `숫자`
+- 마우스 포인터 `체류가 가장 집중된 콘텐츠의 위치` : 원의 `위치`
+- `체류 시간` : 원의 `크기`
+- 전환 혹은 이탈하지 않고 `순차를 이어간 페이지 뷰의 비율:` 원의 `투명도` - 투명할 수록 전환하거나 이탈한 사용자가 많은 콘텐츠
+![Alt text](image-26.png)
+![Alt text](image-27.png)
+> 사람 마다 눈이나 마우스의 움직임 패턴이 다르다.
+![Alt text](image-28.png)
+> 평균을 냄
+![Alt text](image-29.png)
+![Alt text](image-30.png)
+![Alt text](image-31.png)
+
+### 최종 목적지 비교 분석
+![Alt text](image-32.png)
+- Referrer마다 `Click Heatmap을 비교`하여, `사용자의 관심 및 최종 목적지를 비교/분석`할 수 있습니다.
+- 네이버를 통해 들어온 사람들은 검색으로 들어왔기 때문에 다른거 쳐다보지도 않고 목적지로 바로 가서 구매한다.
+![Alt text](image-33.png)
+- Referrer마다 `Movement Heatmap을 비교`하여, `사용자의 관심과 행동의 전반적인 분포를 비교/분석`할 수 있습니다.
+![Alt text](image-34.png)
+- Referrer마다 `Activity Stream을 비교`하여, `콘텐츠의 탐색 흐름과 체류 시간 정보를 비교/분석`할 수 있습니다.
