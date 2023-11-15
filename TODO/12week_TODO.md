@@ -96,7 +96,7 @@
 
 ### `WednesDay November 15` 5h 08m ->
 - [x] `선대` 그람슈미트
-- [ ] `선대` Determinants
+- [x] `선대` Determinants
 - [ ] `선대` Cramer's Rule
 - [ ] `선대과제` PS6 `11월 16일`
 
