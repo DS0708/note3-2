@@ -43,8 +43,8 @@
 ### `선형대수학`
 - [x] `선대` 12-1 강의
 - [x] `선대` 그람슈미트
-- [ ] `선대` Determinants
-- [ ] `선대` Cramer's Rule
+- [x] `선대` Determinants
+- [x] `선대` Cramer's Rule
 - [ ] `선대과제` PS6 `11월 16일`
 - [ ] `선대` 12-2 온라인 강의
 
