@@ -87,8 +87,20 @@
 
 ### `콘텐츠 서비스 분석용 핵심 지표`
 1. UV & PV – 최대한 많은 방문자 확보
-    - 순 방문자 수 (UV)와 페이지 뷰 수(PV)
-2. 평균 체류 시간 – 콘텐츠 소비 시간과 비례
+    #### 순 방문자 수 (UV)와 페이지 뷰 수(PV)
+    - 기본 페이지 별로 PV & UV,  숫자 신규 방문자 & 재방문자 숫자 점검 필요
+    [Alt text](image-42.png)
+2. 평균 체류 시간 – 콘텐츠 소비 시간과 비례!
+    ![Alt text](image-43.png)
+    ![Alt text](image-44.png)
 3. 유입 경로와 공유 수 – 해당 서비스 성장의 실마리
+    ![Alt text](image-45.png)
+    ![Alt text](image-46.png)
 4. 알림 기능 동의자 수 혹은 클릭 수 – 고객의 지속적 방문
+    ![Alt text](image-47.png)
 5. 퍼널 기법으로 월 단위 분석– 단계 별 성과 분석
+    ![Alt text](image-48.png)
+    ![Alt text](image-49.png)
+    #### 구간별 체류시간으로 페이지 내 인기 영역 파악하기
+    ![Alt text](image-50.png)
+    ![Alt text](image-51.png)
