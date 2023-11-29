@@ -1,0 +1,53 @@
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/14주차   main ±  open 1129-201911185-신동성-1.py 
+ᆫ동성-1.py"
+정수 입력 :5
+5! = 120
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/14주차   main ±  touch 1129-201911185-신동성-5.py
+ᆫ동성-1.py"
+정수 입력 :5
+5! = 120
+ᆫ동성-1.py"
+정수 입력 :1
+1! = 1
+ᆫ동성-1.py"
+정수 입력 :6
+6! = 720
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/14주차   main ±  open 1129-201911185-신동성-2.py 
+ᆫ동성-2.py"
+재귀함수
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/14주차   main ±  code 1129-201911185-신동성-3.py 
+ᆫ동성-2.py"
+정수 입력 :5
+5! = 120
+동성-2.py"
+번호(인덱스) 입력: 8 
+fibonacci =  21
+ ✘ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/14주차   main ±  python -u "/Users/ds/ds_study/note3-2/python/14주차/1129-201911185-신 동성-3.py"
+번호(인덱스) 입력 : 10
+fibonacci = 55
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/14주차   main ±  python -u "/Users/ds/ds_study/note3-2/python/14주차/1129-201911185-신동 성-3.py"
+5
+4
+3
+2
+1
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/14주차   main ±  open 1129-201911185-신동성-4.py 
+ᆫ동성-4.py"
+번호(인덱스) 입력: 8
+fibonacci =  21
+ ✘ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/14주차   main  python -u "/Users/ds/ds_study/note3-2/python/14주차/1129-201911185-신동 성-5.py"
+번호(인덱스) 입력 : 10
+fibonacci = 55
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/14주차   main  python -u "/Users/ds/ds_study/note3-2/python/14주차/1129-201911185-신 도성-4.py"
+번호(인덱스) 입력: 40
+fibonacci =  102334155
+코드 실행에 소요된 시간: 15.551637411117554 초
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/14주차   main  python -u "/Users/ds/ds_study/note3-2/python/14주차/1129-201911185-신동성-
+5.py"
+번호(인덱스) 입력 : 40
+fibonacci = 102334155
+코드 실행에 소요된 시간: 1.959641695022583 초
+ ds@sindongseong-ui-MacBookAir  ~/ds_study/note3-2/python/14주차   main  python -u "/Users/ds/ds_study/note3-2/python/14주차/1129-201911185-신 도성-6.py"
+번호(인덱스) 입력 : 40
+fibonacci = 102334155
+코드 실행에 소요된 시간: 2.3654017448425293 초
