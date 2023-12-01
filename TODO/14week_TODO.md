@@ -21,13 +21,13 @@
 - [x] `랜프` 13-2 온라인 강의
 - [x] `랜프` 14-1 온라인 강의
 - [x] `랜프` 14-2 강의
-- [ ] `랜프` Section 4.7
-- [ ] `랜프` Section 5.1
-- [ ] `랜프` Section 5.2
-- [ ] `랜프` Section 5.3
-- [ ] `랜프` Section 5.4
-- [ ] `랜프` Section 5.5
-- [ ] `랜프` Section 5.6
+- [x] `랜프` Section 4.7
+- [x] `랜프` Section 5.1
+- [x] `랜프` Section 5.2
+- [x] `랜프` Section 5.3
+- [x] `랜프` Section 5.4
+- [x] `랜프` Section 5.5
+- [x] `랜프` Section 5.6
 - [ ] `랜프` Section 5.7
 - [ ] `랜프` Section 5.8
 - [ ] `랜프` Section 5.10
@@ -134,7 +134,7 @@
 - [x] `선대` L19
 - [x] `선대` L20
 
-## `FriDay December 01` 50m -> 4h 06m -> (본가) ->
+## `FriDay December 01` 50m -> 4h 06m -> (본가) -> 7h 55m
 - [x] Node.js로 서버만들기 `4장 - 1`
 - [x] `랜프` Section 4.7
 - [x] `랜프` Section 5.1
@@ -145,15 +145,17 @@
 - [x] `랜프` Section 5.5
 - [x] Node.js로 서버만들기 `4장 - 2`
 - [x] `랜프` Section 5.6
-- [ ] `랜프` Section 5.7
-- [ ] Node.js로 서버만들기 `4장 - 3`
-- [ ] `랜프` Section 5.8
-- [ ] `랜프` Section 5.10
-- [ ] Node.js로 서버만들기 `4장 - 4`
+
 
 ## `SaturDay December 02` 1h -> 2h -> (본가) ->
+- [ ] Node.js로 서버만들기 `4장 - 3`
+- [ ] Node.js로 서버만들기 `4장 - 4`
+- [ ] `랜프` Section 5.7
+- [ ] `랜프` Section 5.8
+- [ ] `랜프` Section 5.10
 - [ ] `선대` L21
 - [ ] `선대` L22
+- [ ] `UX 팀플` 모바일 어플리케이션 구현 `12월 06일 발표`
 
 ## `SunDay December 03` 4h 50m -> 4h -> 3h 17m ->
 - [ ] `랜프` Section 6.1
@@ -165,4 +167,4 @@
 - [ ] `클웹` 14주차 2차시 강의
 
 
-# `25h 9m (11week) ->  32h 53m(12week) -> 24h 35m(13week 본가) -> 21h 56m(14week)`
+# `25h 9m (11week) ->  32h 53m(12week) -> 24h 35m(13week 본가) -> 29h 51m(14week)`
