@@ -137,7 +137,7 @@
 ## `FriDay December 01` 50m -> 4h 06m -> (본가) ->
 - [x] Node.js로 서버만들기 `4장 - 1`
 - [x] `랜프` Section 4.7
-- [ ] `랜프` Section 5.1
+- [x] `랜프` Section 5.1
 - [ ] `랜프` Section 5.2
 - [ ] `랜프` Section 5.3
 - [ ] `랜프` Section 5.4
