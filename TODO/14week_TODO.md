@@ -144,7 +144,7 @@
 - [x] `랜프` Section 5.4
 - [x] `랜프` Section 5.5
 - [x] Node.js로 서버만들기 `4장 - 2`
-- [ ] `랜프` Section 5.6
+- [x] `랜프` Section 5.6
 - [ ] `랜프` Section 5.7
 - [ ] Node.js로 서버만들기 `4장 - 3`
 - [ ] `랜프` Section 5.8
