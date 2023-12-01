@@ -143,10 +143,13 @@
 - [x] `UX 팀플` 모바일 어플리케이션 구현 `12월 06일 발표`
 - [x] `랜프` Section 5.4
 - [x] `랜프` Section 5.5
+- [ ] Node.js로 서버만들기 `4장 - 2`
 - [ ] `랜프` Section 5.6
 - [ ] `랜프` Section 5.7
+- [ ] Node.js로 서버만들기 `4장 - 3`
 - [ ] `랜프` Section 5.8
 - [ ] `랜프` Section 5.10
+- [ ] Node.js로 서버만들기 `4장 - 4`
 
 ## `SaturDay December 02` 1h -> 2h -> (본가) ->
 - [ ] `선대` L21
