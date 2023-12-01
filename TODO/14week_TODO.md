@@ -140,13 +140,13 @@
 - [x] `랜프` Section 5.1
 - [x] `랜프` Section 5.2
 - [x] `랜프` Section 5.3
-- [ ] `랜프` Section 5.4
+- [x] `UX 팀플` 모바일 어플리케이션 구현 `12월 06일 발표`
+- [x] `랜프` Section 5.4
 - [ ] `랜프` Section 5.5
 - [ ] `랜프` Section 5.6
 - [ ] `랜프` Section 5.7
 - [ ] `랜프` Section 5.8
 - [ ] `랜프` Section 5.10
-- [ ] `UX 팀플` 모바일 어플리케이션 구현 `12월 06일 발표`
 
 ## `SaturDay December 02` 1h -> 2h -> (본가) ->
 - [ ] `선대` L21
