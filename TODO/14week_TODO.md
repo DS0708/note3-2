@@ -155,7 +155,7 @@
 - [x] `랜프` Section 5.8
 - [x] `랜프` Section 5.10
 - [x] Node.js로 서버만들기 `4장 - 4`
-- [ ] `선대` L21
+- [x] `선대` L21
 - [ ] `선대` L22
 
 ## `SunDay December 03` 4h 50m -> 4h -> 3h 17m ->
