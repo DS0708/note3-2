@@ -149,7 +149,7 @@
 
 ## `SaturDay December 02` 1h -> 2h -> (본가) ->
 - [x] `UX 팀플` 모바일 어플리케이션 구현 `12월 06일 발표`
-- [ ] Node.js로 서버만들기 `4장 - 3`
+- [x] Node.js로 서버만들기 `4장 - 3`
 - [ ] `랜프` Section 5.7
 - [ ] `랜프` Section 5.8
 - [ ] `랜프` Section 5.10
