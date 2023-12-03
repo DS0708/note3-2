@@ -32,18 +32,18 @@
 - [x] `랜프` Section 5.7
 - [x] `랜프` Section 5.8
 - [x] `랜프` Section 5.10
-- [ ] `랜프` Section 6.1
-- [ ] `랜프` Section 6.2
-- [ ] `랜프` Section 6.3
-- [ ] `랜프` Section 6.4
-- [ ] `랜프` Section 6.5
+- [x] `랜프` Section 6.1
+- [x] `랜프` Section 6.2
+- [x] `랜프` Section 6.3
+- [x] `랜프` Section 6.4
+- [x] `랜프` Section 6.5
 
 - [ ] `랜프` 질문하기 2회
 - [ ] `랜프 기말고사 12월 11일 오후 3시`
 
 ## `클라우드 웹 서비스`
 - [x] `클웹` 13주차 3차시 강의
-- [ ] `클웹 팀플` 스마트 시티 어플리케이션 구현 `12월 06일`
+- [x] `클웹 팀플` 스마트 시티 어플리케이션 구현 `12월 06일` - code read
 
 ```
 클라우드 웹서비스 대면 강의 계획
@@ -156,14 +156,13 @@
 - [x] `선대` L21
 - [x] `선대` L22
 
-## `SunDay December 03` 4h 50m -> 4h -> 3h 17m ->
+## `SunDay December 03` 4h 50m -> 4h -> 3h 17m -> 5h 34m
 - [x] `랜프` Section 6.1
 - [x] `랜프` Section 6.2 
 - [x] `클웹 팀플` 스마트 시티 어플리케이션 구현 `12월 06일` - read code
 - [x] `랜프` Section 6.3
 - [x] `랜프` Section 6.4
-- [ ] `랜프` Section 6.5
-- [ ] `클웹 팀플` 스마트 시티 어플리케이션 구현 `12월 06일`
+- [x] `랜프` Section 6.5
 
 
-# `25h 9m (11week) ->  32h 53m(12week) -> 24h 35m(13week 본가) -> 36h 42m(14week)`
+# `25h 9m (11week) ->  32h 53m(12week) -> 24h 35m(13week 본가) -> 42h 16m(14week)`
