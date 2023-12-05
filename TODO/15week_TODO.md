@@ -91,7 +91,7 @@
 - [ ] `UX` Lecture 10
 
 
-## `TuesDay December 05` 9h 7m -> 4h 6m -> 6h 36m -> 7h 46m -> 
+## `TuesDay December 05` 9h 7m -> 4h 6m -> 6h 36m -> 7h 46m -> 9h
 - [x] `대소사` 기말 퀴즈 공부하기 `1회독`
 - [x] `대소사` 기말 퀴즈 공부하기 `2회독`
 - [x] `UX` Lecture 10
@@ -145,4 +145,4 @@
 - [ ] `랜프 기말` Section 6.2 ~ Section 13.1
 
 
-# `25h 9m (11week) ->  32h 53m(12week) -> 24h 35m(13week 본가) -> 42h 16m(14week) -> 1h 53m(15week)` 
+# `25h 9m (11week) ->  32h 53m(12week) -> 24h 35m(13week 본가) -> 42h 16m(14week) -> 10h 53m(15week)` 
