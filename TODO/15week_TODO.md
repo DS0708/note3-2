@@ -153,7 +153,7 @@
 ## `FriDay December 08` 50m -> 4h 06m -> (본가) -> 7h 55m -> 
 - [x] D-3 계획 재정비 
 
-- [ ] `UX` Lecture 12
+- [x] `UX` Lecture 12
 - [ ] `UX` Lecture 13
 
 - [ ] `선대 기말` L16
