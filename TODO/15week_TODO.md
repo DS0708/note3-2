@@ -4,8 +4,8 @@
 - [x] `UX 팀플` 최종 보고서 제출하기
 - [x] `UX` Lecture 10
 - [x] `UX` Lecture 11
-- [ ] `UX` Lecture 12
-- [ ] `UX` Lecture 13
+- [x] `UX` Lecture 12
+- [x] `UX` Lecture 13
 - [ ] `UX` Lecture 14
 - [ ] `UX` Lecture 15
 - [ ] `UX` Lecture 16
@@ -154,7 +154,7 @@
 - [x] D-3 계획 재정비 
 
 - [x] `UX` Lecture 12
-- [ ] `UX` Lecture 13
+- [x] `UX` Lecture 13
 
 - [ ] `선대 기말` L16
 - [ ] `선대 기말` L17
