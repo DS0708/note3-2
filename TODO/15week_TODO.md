@@ -171,7 +171,7 @@
 - [x] `랜프` Section 13.1
 - [x] `랜프 기말` Section 4.7
 - [x] `랜프 기말` Section 5.1
-- [ ] `랜프 기말` Section 5.2
+- [x] `랜프 기말` Section 5.2
 - [ ] `랜프 기말` Section 5.3
 - [ ] `랜프 기말` Section 5.4
 - [ ] `랜프 기말` Section 5.5
