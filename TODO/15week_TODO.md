@@ -168,7 +168,7 @@
 - [x] `랜프` Section 7.1
 - [x] `랜프` Section 7.2
 - [x] `랜프` Section 8.1
-- [ ] `랜프` Section 13.1
+- [x] `랜프` Section 13.1
 - [ ] `랜프 기말` Section 4.7
 - [ ] `랜프 기말` Section 5.1
 - [ ] `랜프 기말` Section 5.2
