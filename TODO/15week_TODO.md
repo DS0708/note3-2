@@ -166,7 +166,7 @@
 - [x] 인공지능 기말 공부  - `11주차`
 
 - [x] `랜프` Section 7.1
-- [ ] `랜프` Section 7.2
+- [x] `랜프` Section 7.2
 - [ ] `랜프` Section 8.1
 - [ ] `랜프` Section 13.1
 - [ ] `랜프 기말` Section 4.7
