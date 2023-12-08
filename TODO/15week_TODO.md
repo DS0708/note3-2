@@ -31,11 +31,11 @@
 - [x] `랜프 기말` Section 5.2
 - [x] `랜프 기말` Section 5.3
 - [x] `랜프 기말` Section 5.4
-- [ ] `랜프 기말` Section 5.5
-- [ ] `랜프 기말` Section 5.6
-- [ ] `랜프 기말` Section 5.7
-- [ ] `랜프 기말` Section 5.8
-- [ ] `랜프 기말` Section 5.10
+- [x] `랜프 기말` Section 5.5
+- [x] `랜프 기말` Section 5.6
+- [x] `랜프 기말` Section 5.7
+- [x] `랜프 기말` Section 5.8
+- [x] `랜프 기말` Section 5.10
 - [ ] `랜프 기말` Section 6.1
 - [ ] `랜프 기말` Section 6.2
 - [ ] `랜프 기말` Section 6.3
@@ -192,8 +192,8 @@
 - [x] `랜프 기말` Section 5.5
 - [x] `랜프 기말` Section 5.6
 - [x] `랜프 기말` Section 5.7
-- [ ] `랜프 기말` Section 5.8
-- [ ] `랜프 기말` Section 5.10
+- [x] `랜프 기말` Section 5.8
+- [x] `랜프 기말` Section 5.10
 - [ ] `랜프 기말` Section 6.1
 - [ ] `랜프 기말` Section 6.2
 - [ ] `랜프 기말` Section 6.3
