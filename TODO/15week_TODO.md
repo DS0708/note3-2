@@ -196,8 +196,8 @@
 - [x] `랜프 기말` Section 5.10
 - [x] `랜프 기말` Section 6.1
 - [x] `랜프 기말` Section 6.2
-- [ ] `랜프 기말` Section 6.3
-- [ ] `랜프 기말` Section 6.4
+- [x] `랜프 기말` Section 6.3
+- [x] `랜프 기말` Section 6.4
 - [ ] `랜프 기말` Section 6.5
 - [ ] `랜프 기말` Section 7.1
 - [ ] `랜프 기말` Section 7.2
