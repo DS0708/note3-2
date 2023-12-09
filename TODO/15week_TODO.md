@@ -173,7 +173,7 @@
 
 
 ## `SaturDay December 09` 1h -> 2h -> (본가) -> 5h 51m -> 
-- [ ] `UX` Lecture 14
+- [x] `UX` Lecture 14
 - [ ] `UX` Lecture 15
 
 - [x] `선대 기말` L16
