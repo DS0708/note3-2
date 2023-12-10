@@ -1,4 +1,4 @@
-# UX_Desing Lecture 15-2 - Data Driven UX - 실전 데이터 분석 사례
+# UX_Desing Lecture 15-1 - Data Driven UX - 실전 데이터 분석 사례
 
 ## 내용 - "뷰저블" 사이트 블로그 중심 - part 01
 1. `세그멘테이션을 사용한 사용자 분석`
