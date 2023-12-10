@@ -70,7 +70,7 @@
 ---
 ---
 
-### `MonDay October 23` 
+### `MonDay October 23` 5h
 - [x] 9week 계획세우기
 - [x] 아이패드 정리
 - [x] 맥 note 3-2 정리
