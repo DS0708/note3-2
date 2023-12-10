@@ -199,7 +199,7 @@
 
 
 ## `SunDay December 10` 4h 50m -> 4h -> 3h 17m -> 5h 34m -> 
-- [ ] `랜프 기말` Section 7.1
+- [x] `랜프 기말` Section 7.1
 - [ ] `랜프 기말` Section 7.2
 - [ ] `랜프 기말` Section 8.2
 - [ ] `랜프 기말` Section 13.1
