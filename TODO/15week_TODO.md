@@ -8,7 +8,7 @@
 - [x] `UX` Lecture 13
 - [x] `UX` Lecture 14
 - [x] `UX` Lecture 15
-- [ ] `UX` Lecture 16
+- [x] `UX` Lecture 16
 - [ ] `UX` 마지막 정리
 
 - [ ] `UX 기말고사 12월 11일`
@@ -212,7 +212,7 @@
 - [x] 인공지능 기말 시험 `마지막 정리` 
 - [x] 인공지능 기말 시험 `12월 10일 시험 오후 8시` 
 
-- [ ] `UX` Lecture 16
+- [x] `UX` Lecture 16
 - [ ] `UX` 마지막 정리
 
 
