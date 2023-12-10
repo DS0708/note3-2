@@ -197,7 +197,7 @@
 - [x] `랜프 기말` Section 6.5
 
 
-## `SunDay December 10` 4h 50m -> 4h -> 3h 17m -> 5h 34m -> 
+## `SunDay December 10` 4h 50m -> 4h -> 3h 17m -> 5h 34m -> 6h 12m
 - [x] `랜프 기말` Section 7.1
 - [x] `랜프 기말` Section 7.2
 - [x] `랜프 기말` Section 8.2
@@ -217,4 +217,4 @@
 
 
 # 중간고사 : `21h 3m (3week) -> 11h (4week) -> 13h 50m(5week 본가) -> 18h 45m(6week) -> 56h 21m(7week) -> 측정 안함(8week 시험)` 
-# 기말고사 : `28h 5m(9week 본가) -> 23h 37m(10week) -> 25h 9m (11week) ->  32h 53m(12week) -> 24h 35m(13week 본가) -> 42h 16m(14week) -> 41h 35m(15week)` 
+# 기말고사 : `28h 5m(9week 본가) -> 23h 37m(10week) -> 25h 9m (11week) ->  32h 53m(12week) -> 24h 35m(13week 본가) -> 42h 16m(14week) -> 47h 47m(15week)` 
