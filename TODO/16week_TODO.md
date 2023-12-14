@@ -49,13 +49,13 @@
 - [x] `대소사` 기말 고사 `12월 12일 오후 7시`
 - [x] `프통문` 1206실습보고서 `12월 12일`
 
-## `WednesDay December 13` 5h 08m -> 8h 48m -> 5h 26m -> 5h 10m -> 13h 27m ->
+## `WednesDay December 13` 5h 08m -> 8h 48m -> 5h 26m -> 5h 10m -> 13h 27m -> 2h
 - [x] `프통문` 기말 준비-1
-- [ ] `프통문` 기말 준비-2
-- [ ] `프통문 기말고사 12월 13일 오후 12시`
+- [x] `프통문` 기말 준비-2
+- [x] `프통문 기말고사 12월 13일 오후 12시`
 
-## `ThursDay December 14` 4h 14m -> 3h 20m -> 4h -> 5h -> 4h 22m ->
-
+## `ThursDay December 14` 4h 14m -> 3h 20m -> 4h -> 5h -> 4h 22m -> 0h
+- [x] 휴식
 
 ## `FriDay December 15` 50m -> 4h 06m -> (본가) -> 7h 55m -> 7h ->
 
@@ -67,4 +67,4 @@
 
 
 # 중간고사 : `21h 3m (3week) -> 11h (4week) -> 13h 50m(5week 본가) -> 18h 45m(6week) -> 56h 21m(7week) -> 측정 안함(8week 시험)` 
-# 기말고사 : `28h 5m(9week 본가) -> 23h 37m(10week) -> 25h 9m (11week) ->  32h 53m(12week) -> 24h 35m(13week 본가) -> 42h 16m(14week) -> 47h 47m(15week) -> 14h 47m(16week 시험)` 
+# 기말고사 : `28h 5m(9week 본가) -> 23h 37m(10week) -> 25h 9m (11week) ->  32h 53m(12week) -> 24h 35m(13week 본가) -> 42h 16m(14week) -> 47h 47m(15week) -> 16h 47m(16week 시험)` 
